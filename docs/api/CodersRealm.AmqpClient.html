@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Namespace CodersRealm.AmqpClient | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Namespace CodersRealm.AmqpClient | CodersRealm Docs ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.AmqpClient">
+
+  <h1 id="CodersRealm_AmqpClient" data-uid="CodersRealm.AmqpClient" class="text-break">Namespace CodersRealm.AmqpClient</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">
+Classes
+</h3>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.AcknowledgementCommandException.html">AcknowledgementCommandException</a></h4>
+      <section><p>Represents an exception that is thrown when an acknowledgement command fails due to an underlying error.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></h4>
+      <section><p>Represents an NMS exception</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.AmqpSecurityException.html">AmqpSecurityException</a></h4>
+      <section><p>Represents a security-related failure that occurs while using the AMQP client.
+This exception is thrown when an operation is denied due to authentication,
+authorization, or other security checks performed by the broker or client.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.Client.html">Client</a></h4>
+      <section><p>Represents a reusable AMQP client that manages an underlying connection and provides access to message broker
+producers, consumers and subscribers. The client is safe for concurrent use and supports asynchronous startup and
+disposal.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ClientOptions.html">ClientOptions</a></h4>
+      <section><p>Represents the configuration options for the NMS AMQP client, including connection string and redelivery policy.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ConnectionException.html">ConnectionException</a></h4>
+      <section><p>Represents a failure to establish or maintain a connection with the AMQP broker.
+This exception is thrown when the client is unable to connect, loses an existing
+connection, or encounters errors related to the underlying transport.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ConsumerExtensions.html">ConsumerExtensions</a></h4>
+      <section><p>Runtime helpers for extracting capability-specific interfaces from a generic
+<a class="xref" href="CodersRealm.AmqpClient.IConsumer.html">IConsumer</a> instance. These helpers avoid breaking changes while
+providing explicit runtime checks for acknowledgement/transactional features.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ConsumerOptions.html">ConsumerOptions</a></h4>
+      <section><p>Options for configuring a message consumer of a queue.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.DefaultRedeliveryPolicy.html">DefaultRedeliveryPolicy</a></h4>
+      <section><p>Represents the default redelivery policy used to determine message redelivery behavior.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IllegalStateException.html">IllegalStateException</a></h4>
+      <section><p>Thrown when an operation is requested that is invalid given the current
+state of the object or client. Use this exception to indicate that the
+requested action cannot be performed until the object reaches an appropriate
+state (for example, calling an API method when the connection is closed).</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.InvalidClientIDException.html">InvalidClientIDException</a></h4>
+      <section><p>Thrown when the client identifier provided for a connection is invalid.
+This mirrors the behavior of the Apache NMS InvalidClientIDException and is
+raised when a client id is malformed, already in use, or otherwise not
+acceptable to the broker or client implementation.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.InvalidDestinationException.html">InvalidDestinationException</a></h4>
+      <section><p>Thrown when an operation references a destination that is invalid for the
+requested action. Examples include non-existent destinations, destinations
+of the wrong type, or destinations with malformed names.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.InvalidSelectorException.html">InvalidSelectorException</a></h4>
+      <section><p>Thrown when a message selector is invalid or cannot be parsed/evaluated by
+the client or broker. This exception indicates that the selector expression
+is malformed or uses unsupported features.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.MessageEOFException.html">MessageEOFException</a></h4>
+      <section><p>Thrown when an unexpected end-of-file or end-of-stream is encountered while
+reading a message. This indicates that the message payload or wire-format
+ended prematurely and the client could not fully deserialize the message.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.MessageFormatException.html">MessageFormatException</a></h4>
+      <section><p>Thrown when a message cannot be parsed or decoded because its format is
+invalid or unsupported. This indicates that the wire-format or payload does
+not conform to the expected message schema and the client cannot construct a
+valid message object from the received data.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></h4>
+      <section><p>Thrown when an attempt is made to read data from a message that is not
+readable. This commonly occurs when a message is in a write-only state or
+when the message payload cannot be accessed for reading.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></h4>
+      <section><p>Thrown when an attempt is made to write to a message that is not writable.
+This occurs for messages that are in a read-only state or when the message
+content cannot be modified (for example after the message has been sent).</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.MessageQueueEventArgs.html">MessageQueueEventArgs</a></h4>
+      <section><p>Provides data for events raised when a message is queued, processed or otherwise
+observed by the consumer pipeline.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ProducerOptions.html">ProducerOptions</a></h4>
+      <section><p>Options used to configure a message producer.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.RedeliveryPolicy.html">RedeliveryPolicy</a></h4>
+      <section><p>A policy used to customize exactly how you want the redelivery to work.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ResourceAllocationException.html">ResourceAllocationException</a></h4>
+      <section><p>Represents a failure that occurs when required resources cannot be allocated.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html">ResponderOptions</a></h4>
+      <section><p>Configuration options that control where and how a responder sends reply messages.
+These options allow specifying an explicit <a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a>, or alternatively
+a destination name and type to be used when creating the response destination.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.SendResponseException.html">SendResponseException</a></h4>
+      <section><p>Represents an exception that is thrown when an error occurs while sending a response message.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ServiceCollectionExtensions.html">ServiceCollectionExtensions</a></h4>
+      <section><p>Provides extension methods for <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to register NMS AMQP client services.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.StartupException.html">StartupException</a></h4>
+      <section><p>Represents an exception that is thrown when an error occurs while starting up a Message Receiver or a Producer.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.SubscriberOptions.html">SubscriberOptions</a></h4>
+      <section><p>Options used to configure a subscriber to a topic.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.TransactionInProgressException.html">TransactionInProgressException</a></h4>
+      <section><p>Thrown when an operation cannot be performed because a transaction is
+already in progress on the connection or session. Use this exception to
+indicate conflicting transaction operations such as attempting to begin a
+new transaction while another is active, or to mark that certain actions
+are illegal during a transaction lifecycle.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.TransactionRolledBackException.html">TransactionRolledBackException</a></h4>
+      <section><p>Thrown when a transaction has been rolled back instead of committed.
+This exception indicates that the work performed within the transaction was
+not applied, either due to an explicit rollback request, an error during the
+transaction, or a broker-initiated rollback.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.TransactionalCommandException.html">TransactionalCommandException</a></h4>
+      <section><p>Represents an exception that is thrown when a transactional command fails during execution.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.UserHandlerException.html">UserHandlerException</a></h4>
+      <section><p>Represents an exception that is thrown when a user-provided handler throws an exception.</p>
+</section>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IAcknowledgeConsumer.html">IAcknowledgeConsumer</a></h4>
+      <section><p>Represents a consumer that supports explicit acknowledge and negative acknowledge
+operations (e.g. ClientAcknowledge or IndividualAcknowledge modes).</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IBytesMessage.html">IBytesMessage</a></h4>
+      <section><p>A BytesMessage object is used to send a message containing a stream of uninterpreted
+bytes. It inherits from the Message interface and adds a bytes message body. The
+receiver of the message supplies the interpretation of the bytes.</p>
+<p>This message type is for client encoding of existing message formats. If possible,
+one of the other self-defining message types should be used instead.</p>
+<p>Although the NMS API allows the use of message properties with byte messages, they
+are typically not used, since the inclusion of properties may affect the format.</p>
+<p>When the message is first created, and when ClearBody is called, the body of the
+message is in write-only mode. After the first call to Reset has been made, the
+message body is in read-only mode. After a message has been sent, the client that
+sent it can retain and modify it without affecting the message that has been sent.
+The same message object can be sent multiple times. When a message has been received,
+the provider has called Reset so that the message body is in read-only mode for the
+client.</p>
+<p>If ClearBody is called on a message in read-only mode, the message body is cleared and
+the message is in write-only mode.</p>
+<p>If a client attempts to read a message in write-only mode, a MessageNotReadableException
+is thrown.</p>
+<p>If a client attempts to write a message in read-only mode, a MessageNotWriteableException
+is thrown.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IClient.html">IClient</a></h4>
+      <section><p>Represents a client that manages AMQP connection lifecycle and related producer/consumer/subscriber managers.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IConsumer.html">IConsumer</a></h4>
+      <section><p>Represents a message consumer that can receive messages from a destination (queue or topic) in a messaging system.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IConsumerManager.html">IConsumerManager</a></h4>
+      <section><p>Manager abstraction responsible for creating and managing <a class="xref" href="CodersRealm.AmqpClient.IConsumer.html">IConsumer</a> instances.
+Implementations provide asynchronous creation methods with various configuration options
+and support deletion/lifecycle management of created consumers.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a></h4>
+      <section><p>A base interface for destinations such as queues or topics</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IDestinationProvider.html">IDestinationProvider</a></h4>
+      <section><p>Provides methods for creating temporary destinations and resolving named destinations (queues and topics) in a messaging system.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IMapMessage.html">IMapMessage</a></h4>
+      <section><p>Represents a Map message which contains key and value pairs which are
+of primitive types</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IMessage.html">IMessage</a></h4>
+      <section><p>Represents a message either to be sent to a message broker or received from a message broker.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IMessageCreator.html">IMessageCreator</a></h4>
+      <section><p>Defines a contract for creating various types of messages in a messaging system. Implementations of this interface are responsible for providing methods to create different message types, such as bytes, map, object, stream, and text messages, both with and without initial content. All methods are asynchronous and return tasks that complete with the created message instances.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IMessageProducer.html">IMessageProducer</a></h4>
+      <section><p>Represents a message producer that can create messages and destinations.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IPrimitiveMap.html">IPrimitiveMap</a></h4>
+      <section><p>Represents a Map of primitive types where the keys are all string instances
+and the values are strings or numbers.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IProducer.html">IProducer</a></h4>
+      <section><p>Defines the contract for a message producer that creates and sends messages to queues or topics in a messaging
+system. Provides asynchronous methods for message creation, sending, and transaction management.
+Implementations are expected to be safe for concurrent use and to honor cancellation semantics where applicable.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IProducerManager.html">IProducerManager</a></h4>
+      <section><p>Factory abstraction responsible for creating and managing <a class="xref" href="CodersRealm.AmqpClient.IProducer.html">IProducer</a> instances.
+Implementations create producers for destinations or queues and support deletion and lifecycle observation.
+All creation methods are asynchronous to allow for remote or I/O-bound producer initialization.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IQueue.html">IQueue</a></h4>
+      <section><p>Represents a queue in a message broker.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IRedeliveryPolicy.html">IRedeliveryPolicy</a></h4>
+      <section><p>Represents the redelivery policy used by the AMQP client for supporting message brokers.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IStreamMessage.html">IStreamMessage</a></h4>
+      <section><p>A StreamMessage object is used to send a stream of primitive types in the
+.NET programming language. It is filled and read sequentially. It inherits
+from the Message interface and adds a stream message body.</p>
+<p>The primitive types can be read or written explicitly using methods for each
+type. They may also be read or written generically as objects. For instance,
+a call to IStreamMessage.WriteInt32(6) is equivalent to
+StreamMessage.WriteObject( (Int32)6 ). Both forms are provided, because the
+explicit form is convenient for static programming, and the object form is
+needed when types are not known at compile time.</p>
+<p>When the message is first created, and when ClearBody is called, the body of
+the message is in write-only mode. After the first call to reset has been made,
+the message body is in read-only mode. After a message has been sent, the
+client that sent it can retain and modify it without affecting the message
+that has been sent. The same message object can be sent multiple times. When a
+message has been received, the provider has called reset so that the message
+body is in read-only mode for the client.</p>
+<p>If ClearBody is called on a message in read-only mode, the message body is
+cleared and the message body is in write-only mode.</p>
+<p>If a client attempts to read a message in write-only mode, a
+MessageNotReadableException is thrown.</p>
+<p>If a client attempts to write a message in read-only mode, a
+MessageNotWriteableException is thrown.</p>
+<p>IStreamMessage objects support the following conversion table. The marked cases
+must be supported. The unmarked cases must throw a NMSException. The
+String-to-primitive conversions may throw a runtime exception if the primitive's
+valueOf() method does not accept it as a valid String representation of the
+primitive.</p>
+<p>A value written as the row type can be read as the column type.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>boolean byte short char int long float double String byte[]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>X                                            X</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>X     X         X   X                  X</td>
+</tr>
+<tr>
+<td>short</td>
+<td>X         X   X                  X</td>
+</tr>
+<tr>
+<td>char</td>
+<td>X                           X</td>
+</tr>
+<tr>
+<td>int</td>
+<td>X   X                  X</td>
+</tr>
+<tr>
+<td>long</td>
+<td>X                  X</td>
+</tr>
+<tr>
+<td>float</td>
+<td>X     X      X</td>
+</tr>
+<tr>
+<td>double</td>
+<td>X      X</td>
+</tr>
+<tr>
+<td>String</td>
+<td>X     X     X         X   X     X     X      X</td>
+</tr>
+<tr>
+<td>byte[]</td>
+<td>X</td>
+</tr>
+<tr>
+<td>----------------------------------------------------------------------</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ISubscriber.html">ISubscriber</a></h4>
+      <section><p>Represents a message consumer that can receive messages from a destination (queue or topic) in a messaging system.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ISubscriberManager.html">ISubscriberManager</a></h4>
+      <section><p>Manager abstraction responsible for creating and managing <a class="xref" href="CodersRealm.AmqpClient.ISubscriber.html">ISubscriber</a> instances.
+Implementations provide asynchronous creation methods with various configuration options
+and support deletion/lifecycle management of created subscribers.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ITemporaryQueue.html">ITemporaryQueue</a></h4>
+      <section><p>Represents a temporary queue which exists for the duration of the IConnection which created it.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ITemporaryTopic.html">ITemporaryTopic</a></h4>
+      <section><p>Represents a temporary topic which exists for the duration
+of the IConnection which created it.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ITextMessage.html">ITextMessage</a></h4>
+      <section><p>Represents a text based message</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ITopic.html">ITopic</a></h4>
+      <section><p>Represents a topic in a message broker.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ITransactionalConsumer.html">ITransactionalConsumer</a></h4>
+      <section><p>Represents a consumer that supports transactional commands (Commit/Rollback).</p>
+</section>
+    <h3 id="enums">
+Enums
+</h3>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.AcknowledgementMode.html">AcknowledgementMode</a></h4>
+      <section><p>The mode used to acknowledge messages after they are consumed</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.DestinationType.html">DestinationType</a></h4>
+      <section><p>Represents the type of the destination such as a queue or topic.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.MessageAction.html">MessageAction</a></h4>
+      <section><p>Defines the actions that can be taken for a message processed by the consumer.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.MsgDeliveryMode.html">MsgDeliveryMode</a></h4>
+      <section><p>Define an enumerated array of message delivery modes.  Provider-specific
+values can be used to extend this enumerated mode.  TIBCO is known to
+provide a third value of ReliableDelivery.  At minimum, a provider must
+support Persistent and NonPersistent.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.MsgPriority.html">MsgPriority</a></h4>
+      <section><p>Define an enumerated array of message priorities.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ResponseDestinationType.html">ResponseDestinationType</a></h4>
+      <section><p>Specifies the type of destination to which a response message is sent.</p>
+</section>
+    <h3 id="delegates">
+Delegates
+</h3>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ErrorHandlerAsync.html">ErrorHandlerAsync</a></h4>
+      <section><p>Delegate invoked when an error occurs while processing messages.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.MessageProcessorAsync.html">MessageProcessorAsync</a></h4>
+      <section><p>Delegate invoked when a message is received from the message queue.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.MessageTransformerAsync.html">MessageTransformerAsync</a></h4>
+      <section><p>A delegate that a client can register that will be called to preprocess messages allowing the client to modify
+message properties and/or transform a message from one type to another, StreamMessage to TextMessage,
+ObjectMessage to TextMessage containing XML, etc. Return null or original message if no change.</p>
+</section>
+
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

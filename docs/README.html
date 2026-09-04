@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>DocFX documentation deployment | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="DocFX documentation deployment | CodersRealm Docs ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="images/codersrealm-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="docfx-documentation-deployment">DocFX documentation deployment</h1>
+
+<p>This folder contains documentation guidance and the helper scripts used to build and publish the project's DocFX-generated documentation.</p>
+<p>Summary of the current workflow (updated): the documentation deployment is triggered as part of the project's Pack step. When you run the Pack command for the CodersRealm.AmqpClient project (for example via <code>dotnet pack</code> or the Visual Studio Pack action), the repository's packaging targets will invoke script-main-runner.ps1 which in turn invokes the DocFX deployment flow. A separate convenience script (deploy-docs.ps1) is also included for manual runs.</p>
+<p>What changed from earlier versions:</p>
+<ul>
+<li>The Pack step now runs the primary automation (script-main-runner.ps1). You no longer need to run deploy steps only from the top-level repo by default.</li>
+<li>The scripts still publish into a separate documentation repository (a sibling repo with the gh-pages branch), but invocation and some layout assumptions were simplified.</li>
+</ul>
+<hr>
+<h2 id="architecture--behavior">Architecture &amp; behavior</h2>
+<ul>
+<li>The pack-time runner (script-main-runner.ps1) collects XML documentation from the build output, runs DocFX to generate the static site, and places the generated site into the <code>docs</code> folder of the configured documentation repository.</li>
+<li>The deployment script clears visible contents in the target <code>docs</code> folder while preserving the target repo's <code>.git</code> folder so history and branch metadata remain intact.</li>
+<li>The target repository is switched to the <code>gh-pages</code> branch for publishing. The freshly generated files are committed and pushed to the remote <code>gh-pages</code> branch. The publish uses a force push to ensure the published site matches the generated output exactly.</li>
+<li>After publishing, the script leaves the documentation repository in a clean state (switching back to the default branch) so your workspace remains usable.</li>
+</ul>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>PowerShell 7+ (recommended) otherwise you have to modify scripts to work with Windows Powershell</li>
+<li>Git (configured with credentials to push to the documentation repository)</li>
+<li>GitHub CLI (to install: winget install GitHub.cli)</li>
+<li>DocFX CLI available on PATH</li>
+<li>dotnet SDK (the same SDK you use to build/pack the CodersRealm.AmqpClient project)</li>
+</ul>
+<p>Note: Your development machine must be able to run <code>dotnet pack</code> for the CodersRealm.AmqpClient project. The pack process is what triggers the automatic script-main-runner.ps1 invocation.</p>
+<hr>
+<h2 id="local-repository-layout">Local repository layout</h2>
+<p>The scripts assume a sibling repository layout where the documentation repository is next to the code repository. Example:</p>
+<pre><code>&lt;development-root&gt;/
+├── AmqpClient/                         &lt;-- this repository (source + packaging targets)
+│   ├── src/                               &lt;-- project source tree
+│   └── docfx/                             &lt;-- the folder with scripts and docfx.json
+└── AmqpClient-Docs/                    &lt;-- documentation repository (target for published docs)
+    ├── .git/
+    └── Docs/                              &lt;-- GitHub Pages reads from this folder (gh-pages branch)
+</code></pre>
+<hr>
+<h2 id="how-to-publish">How to publish</h2>
+<p>Preferred (automated):</p>
+<ol>
+<li><p>Within Visual Studio, with the solution opened, on the CodersRealm.AmqpClient project right click and select the the Pack command.</p>
+<p>Or via command line (from the solution folder): dotnet pack ./src/CodersRealm.AmqpClient.csproj -c Release</p>
+<p>The project's pack targets will invoke script-main-runner.ps1 which performs the DocFX generation and deployment.</p>
+</li>
+</ol>
+<p>Manual (developer debugging or one-off):</p>
+<ol>
+<li><p>Build the project and ensure XML documentation files are produced.</p>
+</li>
+<li><p>From the docfx folder run the convenience script (if present):</p>
+<p>pwsh ./docfx/deploy-docs.ps1</p>
+<p>Note: the manual script may accept parameters (target repo path, branch, etc.). Inspect the script header for supported switches before running.</p>
+</li>
+</ol>
+<hr>
+<h2 id="safety-and-important-notes">Safety and important notes</h2>
+<ul>
+<li>The publish operation performs a force push (git push -f) to the gh-pages branch on the documentation repository. This will replace the remote content on that branch. Make sure you have backups or that this is the intended behavior.</li>
+<li>The scripts configure Git local settings to avoid CRLF/LF conversion issues (they set core.autocrlf and core.safecrlf locally). This prevents DocFX's LF assets from being altered by Git.</li>
+<li>The scripts include checks to avoid committing when nothing changed.</li>
+</ul>
+<hr>
+<p>If you need the documentation published from a CI pipeline instead of locally, call <code>dotnet pack</code> (or the equivalent MSBuild Pack target) inside the CI agent and ensure the CI runner has permissions to push to the documentation repository.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

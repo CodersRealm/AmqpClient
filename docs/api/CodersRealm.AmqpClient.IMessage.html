@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IMessage | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IMessage | CodersRealm Docs ">
+    
+    <meta name="description" content="Represents a message either to be sent to a message broker or received from a message broker.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.AmqpClient.IMessage">
+
+
+
+  <h1 id="CodersRealm_AmqpClient_IMessage" data-uid="CodersRealm.AmqpClient.IMessage" class="text-break">Interface IMessage</h1>
+  <div class="markdown level0 summary"><p>Represents a message either to be sent to a message broker or received from a message broker.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.AmqpClient.html">AmqpClient</a></h6>
+  <h6><strong>Assembly</strong>: CodersRealm.AmqpClient.dll</h6>
+  <h5 id="CodersRealm_AmqpClient_IMessage_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IMessage</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_CorrelationID_" data-uid="CodersRealm.AmqpClient.IMessage.CorrelationID*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_CorrelationID" data-uid="CodersRealm.AmqpClient.IMessage.CorrelationID">CorrelationID</h4>
+  <div class="markdown level1 summary"><p>The correlation ID used to correlate messages from conversations or long running business processes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string CorrelationID { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_DeliveryMode_" data-uid="CodersRealm.AmqpClient.IMessage.DeliveryMode*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_DeliveryMode" data-uid="CodersRealm.AmqpClient.IMessage.DeliveryMode">DeliveryMode</h4>
+  <div class="markdown level1 summary"><p>Whether or not this message is persistent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">MsgDeliveryMode DeliveryMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MsgDeliveryMode.html">MsgDeliveryMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_DeliveryTime_" data-uid="CodersRealm.AmqpClient.IMessage.DeliveryTime*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_DeliveryTime" data-uid="CodersRealm.AmqpClient.IMessage.DeliveryTime">DeliveryTime</h4>
+  <div class="markdown level1 summary"><p>When a message is sent, the DeliveryTime header field is
+left unassigned. After completion of the send or
+publish method, it holds the delivery time of the message.
+This is the the difference, measured in milliseconds,
+between the delivery time and midnight, January 1, 1970 UTC.</p>
+<p>A message's delivery time is the earliest time when a JMS provider may
+deliver the message to a consumer. The provider must not deliver messages
+before the delivery time has been reached.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTime DeliveryTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_Destination_" data-uid="CodersRealm.AmqpClient.IMessage.Destination*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_Destination" data-uid="CodersRealm.AmqpClient.IMessage.Destination">Destination</h4>
+  <div class="markdown level1 summary"><p>The destination of the message.  This property is set by the IMessageProducer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDestination? Destination { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_MessageId_" data-uid="CodersRealm.AmqpClient.IMessage.MessageId*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_MessageId" data-uid="CodersRealm.AmqpClient.IMessage.MessageId">MessageId</h4>
+  <div class="markdown level1 summary"><p>The message ID which is set by the provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string MessageId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_Priority_" data-uid="CodersRealm.AmqpClient.IMessage.Priority*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_Priority" data-uid="CodersRealm.AmqpClient.IMessage.Priority">Priority</h4>
+  <div class="markdown level1 summary"><p>The Priority of this message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">MsgPriority Priority { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MsgPriority.html">MsgPriority</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_Properties_" data-uid="CodersRealm.AmqpClient.IMessage.Properties*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_Properties" data-uid="CodersRealm.AmqpClient.IMessage.Properties">Properties</h4>
+  <div class="markdown level1 summary"><p>Provides access to the message properties (headers).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPrimitiveMap Properties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.IPrimitiveMap.html">IPrimitiveMap</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_Redelivered_" data-uid="CodersRealm.AmqpClient.IMessage.Redelivered*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_Redelivered" data-uid="CodersRealm.AmqpClient.IMessage.Redelivered">Redelivered</h4>
+  <div class="markdown level1 summary"><p>Returns true if this message has been redelivered to this or another consumer before being acknowledged successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Redelivered { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_ReplyTo_" data-uid="CodersRealm.AmqpClient.IMessage.ReplyTo*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_ReplyTo" data-uid="CodersRealm.AmqpClient.IMessage.ReplyTo">ReplyTo</h4>
+  <div class="markdown level1 summary"><p>The destination that the consumer of this message should send replies to</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDestination? ReplyTo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_TimeToLive_" data-uid="CodersRealm.AmqpClient.IMessage.TimeToLive*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_TimeToLive" data-uid="CodersRealm.AmqpClient.IMessage.TimeToLive">TimeToLive</h4>
+  <div class="markdown level1 summary"><p>The amount of time for which this message is valid.  Zero if this message does not expire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TimeSpan TimeToLive { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_Timestamp_" data-uid="CodersRealm.AmqpClient.IMessage.Timestamp*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_Timestamp" data-uid="CodersRealm.AmqpClient.IMessage.Timestamp">Timestamp</h4>
+  <div class="markdown level1 summary"><p>The timestamp of when the message was pubished in UTC time.  If the publisher disables setting
+the timestamp on the message, the time will be set to the start of the UNIX epoc (1970-01-01 00:00:00).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTime Timestamp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_Type_" data-uid="CodersRealm.AmqpClient.IMessage.Type*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_Type" data-uid="CodersRealm.AmqpClient.IMessage.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The type name of this message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Type { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_Acknowledge_" data-uid="CodersRealm.AmqpClient.IMessage.Acknowledge*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_Acknowledge" data-uid="CodersRealm.AmqpClient.IMessage.Acknowledge">Acknowledge()</h4>
+  <div class="markdown level1 summary"><p>If using client acknowledgement mode on the session, then this method will acknowledge that the
+message has been processed correctly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Acknowledge()</code></pre>
+  </div>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_AcknowledgeAsync_" data-uid="CodersRealm.AmqpClient.IMessage.AcknowledgeAsync*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_AcknowledgeAsync" data-uid="CodersRealm.AmqpClient.IMessage.AcknowledgeAsync">AcknowledgeAsync()</h4>
+  <div class="markdown level1 summary"><p>If using client acknowledgement mode on the session, then this method will acknowledge that the
+message has been processed correctly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task AcknowledgeAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_Body_" data-uid="CodersRealm.AmqpClient.IMessage.Body*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_Body__1" data-uid="CodersRealm.AmqpClient.IMessage.Body``1">Body&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>The message body as a byte array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T Body&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_ClearBody_" data-uid="CodersRealm.AmqpClient.IMessage.ClearBody*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_ClearBody" data-uid="CodersRealm.AmqpClient.IMessage.ClearBody">ClearBody()</h4>
+  <div class="markdown level1 summary"><p>Clears out the message body. Clearing a message's body does not clear its header
+values or property entries.</p>
+<p>If this message body was read-only, calling this method leaves the message body in
+the same state as an empty body in a newly created message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ClearBody()</code></pre>
+  </div>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_ClearProperties_" data-uid="CodersRealm.AmqpClient.IMessage.ClearProperties*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_ClearProperties" data-uid="CodersRealm.AmqpClient.IMessage.ClearProperties">ClearProperties()</h4>
+  <div class="markdown level1 summary"><p>Clears a message's properties.</p>
+<p>The message's header fields and body are not cleared.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ClearProperties()</code></pre>
+  </div>
+
+
+  <a id="CodersRealm_AmqpClient_IMessage_IsBodyAssignableTo_" data-uid="CodersRealm.AmqpClient.IMessage.IsBodyAssignableTo*"></a>
+  <h4 id="CodersRealm_AmqpClient_IMessage_IsBodyAssignableTo_System_Type_" data-uid="CodersRealm.AmqpClient.IMessage.IsBodyAssignableTo(System.Type)">IsBodyAssignableTo(Type)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the message body can be assigned to the specified type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsBodyAssignableTo(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type to check against the message body.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if the message body can be assigned to the specified type; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

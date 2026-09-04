@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Enum AcknowledgementMode | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Enum AcknowledgementMode | CodersRealm Docs ">
+    
+    <meta name="description" content="The mode used to acknowledge messages after they are consumed">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.AmqpClient.AcknowledgementMode">
+
+
+
+
+  <h1 id="CodersRealm_AmqpClient_AcknowledgementMode" data-uid="CodersRealm.AmqpClient.AcknowledgementMode" class="text-break">Enum AcknowledgementMode</h1>
+  <div class="markdown level0 summary"><p>The mode used to acknowledge messages after they are consumed</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.AmqpClient.html">AmqpClient</a></h6>
+  <h6><strong>Assembly</strong>: CodersRealm.AmqpClient.dll</h6>
+  <h5 id="CodersRealm_AmqpClient_AcknowledgementMode_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum AcknowledgementMode</code></pre>
+  </div>
+  <h3 id="fields">Fields
+</h3>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    </thead></thead><tbody>
+      <tr>
+        <td id="CodersRealm_AmqpClient_AcknowledgementMode_AutoAcknowledge">AutoAcknowledge</td>
+        <td><p>With this acknowledgment mode, the session will not
+acknowledge receipt of a message since the broker assumes
+successful receipt of a message after the onMessage handler
+has returned without error.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="CodersRealm_AmqpClient_AcknowledgementMode_ClientAcknowledge">ClientAcknowledge</td>
+        <td><p>With this acknowledgment mode, the client acknowledges a
+consumed message by calling the message's acknowledge method.
+This acknowledgment acknowledges the given message and all
+unacknowedged messages that have preceeded it for the session
+in which the message was delivered.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="CodersRealm_AmqpClient_AcknowledgementMode_DupsOkAcknowledge">DupsOkAcknowledge</td>
+        <td><p>With this acknowledgment mode, the session automatically
+acknowledges a client's receipt of a message either when
+the session has successfully returned from a call to receive
+or when the message listener the session has called to
+process the message successfully returns.  Acknowlegements
+may be delayed in this mode to increase performance at
+the cost of the message being redelivered if the client fails.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="CodersRealm_AmqpClient_AcknowledgementMode_IndividualAcknowledge">IndividualAcknowledge</td>
+        <td><p>With this acknowledgment mode, the client acknowledges a
+consumed message by calling the message's acknowledge method.
+This acknowledgement mode allows the client to acknowledge a
+single message.  This mode is not required to be supported by
+all providers, however the provider should throw an appropriate
+exception to indicate that the mode is unsupported.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="CodersRealm_AmqpClient_AcknowledgementMode_Transactional">Transactional</td>
+        <td><p>Messages will be consumed when the transaction commits.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

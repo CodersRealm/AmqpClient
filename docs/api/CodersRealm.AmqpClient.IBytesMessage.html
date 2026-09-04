@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IBytesMessage | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IBytesMessage | CodersRealm Docs ">
+    
+    <meta name="description" content="A BytesMessage object is used to send a message containing a stream of uninterpreted bytes. It inherits from the Message interface and adds a bytes message body. The receiver of the message supplies the interpretation of the bytes. This message type is for client encoding of existing message formats. If possible, one of the other self-defining message types should be used instead. Although the NMS API allows the use of message properties with byte messages, they are typically not used, since the inclusion of properties may affect the format. When the message is first created, and when ClearBody is called, the body of the message is in write-only mode. After the first call to Reset has been made, the message body is in read-only mode. After a message has been sent, the client that sent it can retain and modify it without affecting the message that has been sent. The same message object can be sent multiple times. When a message has been received, the provider has called Reset so that the message body is in read-only mode for the client. If ClearBody is called on a message in read-only mode, the message body is cleared and the message is in write-only mode. If a client attempts to read a message in write-only mode, a MessageNotReadableException is thrown. If a client attempts to write a message in read-only mode, a MessageNotWriteableException is thrown.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.AmqpClient.IBytesMessage">
+
+
+
+  <h1 id="CodersRealm_AmqpClient_IBytesMessage" data-uid="CodersRealm.AmqpClient.IBytesMessage" class="text-break">Interface IBytesMessage</h1>
+  <div class="markdown level0 summary"><p>A BytesMessage object is used to send a message containing a stream of uninterpreted
+bytes. It inherits from the Message interface and adds a bytes message body. The
+receiver of the message supplies the interpretation of the bytes.</p>
+<p>This message type is for client encoding of existing message formats. If possible,
+one of the other self-defining message types should be used instead.</p>
+<p>Although the NMS API allows the use of message properties with byte messages, they
+are typically not used, since the inclusion of properties may affect the format.</p>
+<p>When the message is first created, and when ClearBody is called, the body of the
+message is in write-only mode. After the first call to Reset has been made, the
+message body is in read-only mode. After a message has been sent, the client that
+sent it can retain and modify it without affecting the message that has been sent.
+The same message object can be sent multiple times. When a message has been received,
+the provider has called Reset so that the message body is in read-only mode for the
+client.</p>
+<p>If ClearBody is called on a message in read-only mode, the message body is cleared and
+the message is in write-only mode.</p>
+<p>If a client attempts to read a message in write-only mode, a MessageNotReadableException
+is thrown.</p>
+<p>If a client attempts to write a message in read-only mode, a MessageNotWriteableException
+is thrown.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_Acknowledge">IMessage.Acknowledge()</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_AcknowledgeAsync">IMessage.AcknowledgeAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_ClearBody">IMessage.ClearBody()</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_ClearProperties">IMessage.ClearProperties()</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_Properties">IMessage.Properties</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_CorrelationID">IMessage.CorrelationID</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_Destination">IMessage.Destination</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_TimeToLive">IMessage.TimeToLive</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_MessageId">IMessage.MessageId</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_DeliveryMode">IMessage.DeliveryMode</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_Priority">IMessage.Priority</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_Redelivered">IMessage.Redelivered</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_ReplyTo">IMessage.ReplyTo</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_Timestamp">IMessage.Timestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_Type">IMessage.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_DeliveryTime">IMessage.DeliveryTime</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_Body__1">IMessage.Body&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="CodersRealm.AmqpClient.IMessage.html#CodersRealm_AmqpClient_IMessage_IsBodyAssignableTo_System_Type_">IMessage.IsBodyAssignableTo(Type)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.AmqpClient.html">AmqpClient</a></h6>
+  <h6><strong>Assembly</strong>: CodersRealm.AmqpClient.dll</h6>
+  <h5 id="CodersRealm_AmqpClient_IBytesMessage_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IBytesMessage : IMessage</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_BodyLength_" data-uid="CodersRealm.AmqpClient.IBytesMessage.BodyLength*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_BodyLength" data-uid="CodersRealm.AmqpClient.IBytesMessage.BodyLength">BodyLength</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long BodyLength { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
+        <td><p>Gets the number of bytes of the message body when the message is in read-only mode.
+The value returned can be used to allocate a byte array. The value returned is the
+entire length of the message body, regardless of where the pointer for reading the
+message is currently located.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_Content_" data-uid="CodersRealm.AmqpClient.IBytesMessage.Content*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_Content" data-uid="CodersRealm.AmqpClient.IBytesMessage.Content">Content</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the number of bytes in the message body.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">byte[] Content { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_ReadBoolean_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadBoolean*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_ReadBoolean" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadBoolean">ReadBoolean()</h4>
+  <div class="markdown level1 summary"><p>Reads a boolean from the Message Stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ReadBoolean()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageEOFException.html">MessageEOFException</a></td>
+        <td><p>Thrown when an unexpected end of bytes has been reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_ReadByte_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadByte*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_ReadByte" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadByte">ReadByte()</h4>
+  <div class="markdown level1 summary"><p>Reads a byte from the Message Stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">byte ReadByte()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageEOFException.html">MessageEOFException</a></td>
+        <td><p>Thrown when an unexpected end of bytes has been reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_ReadBytes_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadBytes*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_ReadBytes_System_Byte___" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadBytes(System.Byte[])">ReadBytes(byte[])</h4>
+  <div class="markdown level1 summary"><p>Reads a byte array from the bytes message stream.</p>
+<p>If the length of array value is less than the number of bytes remaining to
+be read from the stream, the array should be filled. A subsequent call reads
+the next increment, and so on.</p>
+<p>If the number of bytes remaining in the stream is less than the length of array
+value, the bytes should be read into the array. The return value of the total number
+of bytes read will be less than the length of the array, indicating that there are
+no more bytes left to be read from the stream. The next read of the stream returns -1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ReadBytes(byte[] value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The byte array that will be used as a buffer to read into.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>
+The number of bytes read into the passed byte array, or -1 if there are no more
+bytes left to be read from the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_ReadBytes_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadBytes*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_ReadBytes_System_Byte___System_Int32_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadBytes(System.Byte[],System.Int32)">ReadBytes(byte[], int)</h4>
+  <div class="markdown level1 summary"><p>Reads a portion of the bytes message stream.</p>
+<p>If the length of array value is less than the number of bytes remaining to be
+read from the stream, the array should be filled. A subsequent call reads the
+next increment, and so on.</p>
+<p>If the number of bytes remaining in the stream is less than the length of array
+value, the bytes should be read into the array. The return value of the total
+number of bytes read will be less than the length of the array, indicating that
+there are no more bytes left to be read from the stream. The next read of the
+stream returns -1.</p>
+<p>If length is negative, or length is greater than the length of the array value,
+then an Exception is thrown. No bytes will be read from the stream for this
+exception case.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ReadBytes(byte[] value, int length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The byte array that will be used as a buffer to read into.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>The amount of bytes to read into the buffer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>
+The number of bytes read into the passed byte array, or -1 if there are no more
+bytes left to be read from the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_ReadChar_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadChar*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_ReadChar" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadChar">ReadChar()</h4>
+  <div class="markdown level1 summary"><p>Reads a char from the Message Stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">char ReadChar()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageEOFException.html">MessageEOFException</a></td>
+        <td><p>Thrown when an unexpected end of bytes has been reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_ReadDouble_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadDouble*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_ReadDouble" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadDouble">ReadDouble()</h4>
+  <div class="markdown level1 summary"><p>Reads an double from the Message Stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double ReadDouble()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageEOFException.html">MessageEOFException</a></td>
+        <td><p>Thrown when an unexpected end of bytes has been reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_ReadInt16_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadInt16*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_ReadInt16" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadInt16">ReadInt16()</h4>
+  <div class="markdown level1 summary"><p>Reads a Short from the Message Stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">short ReadInt16()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageEOFException.html">MessageEOFException</a></td>
+        <td><p>Thrown when an unexpected end of bytes has been reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_ReadInt32_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadInt32*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_ReadInt32" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadInt32">ReadInt32()</h4>
+  <div class="markdown level1 summary"><p>Reads an int from the Message Stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ReadInt32()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageEOFException.html">MessageEOFException</a></td>
+        <td><p>Thrown when an unexpected end of bytes has been reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_ReadInt64_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadInt64*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_ReadInt64" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadInt64">ReadInt64()</h4>
+  <div class="markdown level1 summary"><p>Reads a long from the Message Stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long ReadInt64()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageEOFException.html">MessageEOFException</a></td>
+        <td><p>Thrown when an unexpected end of bytes has been reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_ReadSingle_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadSingle*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_ReadSingle" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadSingle">ReadSingle()</h4>
+  <div class="markdown level1 summary"><p>Reads a float from the Message Stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float ReadSingle()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageEOFException.html">MessageEOFException</a></td>
+        <td><p>Thrown when an unexpected end of bytes has been reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_ReadString_" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadString*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_ReadString" data-uid="CodersRealm.AmqpClient.IBytesMessage.ReadString">ReadString()</h4>
+  <div class="markdown level1 summary"><p>Reads a string that has been encoded using a modified UTF-8 format from the bytes
+message stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ReadString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotReadableException.html">MessageNotReadableException</a></td>
+        <td><p>Thrown when the Message is in write-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageEOFException.html">MessageEOFException</a></td>
+        <td><p>Thrown when an unexpected end of bytes has been reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_Reset_" data-uid="CodersRealm.AmqpClient.IBytesMessage.Reset*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_Reset" data-uid="CodersRealm.AmqpClient.IBytesMessage.Reset">Reset()</h4>
+  <div class="markdown level1 summary"><p>Puts the message body in read-only mode and repositions the stream of bytes to the beginning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Reset()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageFormatException.html">MessageFormatException</a></td>
+        <td><p>Thrown when the Message has an invalid format.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteBoolean_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteBoolean*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteBoolean_System_Boolean_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteBoolean(System.Boolean)">WriteBoolean(bool)</h4>
+  <div class="markdown level1 summary"><p>Write a one byte value to the message stream representing the boolean
+value passed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteBoolean(bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteByte_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteByte*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteByte_System_Byte_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteByte(System.Byte)">WriteByte(byte)</h4>
+  <div class="markdown level1 summary"><p>Writes a byte to the Message stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteByte(byte value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteBytes_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteBytes*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteBytes_System_Byte___" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteBytes(System.Byte[])">WriteBytes(byte[])</h4>
+  <div class="markdown level1 summary"><p>Writes a byte array to the bytes message stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteBytes(byte[] value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteBytes_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteBytes*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteBytes_System_Byte___System_Int32_System_Int32_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteBytes(System.Byte[],System.Int32,System.Int32)">WriteBytes(byte[], int, int)</h4>
+  <div class="markdown level1 summary"><p>Writes a portion of a byte array to the bytes message stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteBytes(byte[] value, int offset, int length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteChar_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteChar*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteChar_System_Char_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteChar(System.Char)">WriteChar(char)</h4>
+  <div class="markdown level1 summary"><p>Write a two byte value to the message stream representing the character
+value passed.  High byte first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteChar(char value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteDouble_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteDouble*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteDouble_System_Double_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteDouble(System.Double)">WriteDouble(double)</h4>
+  <div class="markdown level1 summary"><p>Write a eight byte value to the message stream representing the double
+value passed.  High byte first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteDouble(double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteInt16_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteInt16*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteInt16_System_Int16_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteInt16(System.Int16)">WriteInt16(short)</h4>
+  <div class="markdown level1 summary"><p>Write a two byte value to the message stream representing the short
+value passed.  High byte first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteInt16(short value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteInt32_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteInt32*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteInt32_System_Int32_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteInt32(System.Int32)">WriteInt32(int)</h4>
+  <div class="markdown level1 summary"><p>Write a four byte value to the message stream representing the integer
+value passed.  High byte first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteInt32(int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteInt64_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteInt64*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteInt64_System_Int64_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteInt64(System.Int64)">WriteInt64(long)</h4>
+  <div class="markdown level1 summary"><p>Write a eight byte value to the message stream representing the long
+value passed.  High byte first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteInt64(long value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteObject_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteObject*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteObject_System_Object_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteObject(System.Object)">WriteObject(object)</h4>
+  <div class="markdown level1 summary"><p>Writes an object to the bytes message stream.</p>
+<p>This method works only for the objectified primitive object types
+(Int32, Double, Boolean ...), String objects, and byte arrays.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteObject(object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>
+the object in the .NET programming language to be written; it must not be null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageFormatException.html">MessageFormatException</a></td>
+        <td><p>Thrown when the Message has an invalid format.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteSingle_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteSingle*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteSingle_System_Single_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteSingle(System.Single)">WriteSingle(float)</h4>
+  <div class="markdown level1 summary"><p>Write a four byte value to the message stream representing the float
+value passed.  High byte first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteSingle(float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_IBytesMessage_WriteString_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteString*"></a>
+  <h4 id="CodersRealm_AmqpClient_IBytesMessage_WriteString_System_String_" data-uid="CodersRealm.AmqpClient.IBytesMessage.WriteString(System.String)">WriteString(string)</h4>
+  <div class="markdown level1 summary"><p>Writes a string to the bytes message stream using UTF-8 encoding in a
+machine-independent manner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteString(string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageNotWriteableException.html">MessageNotWriteableException</a></td>
+        <td><p>Thrown when the Message is in read-only mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></td>
+        <td><p>Thrown when there is an unhandled exception thrown from the provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

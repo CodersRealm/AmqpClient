@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ClientOptions | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ClientOptions | CodersRealm Docs ">
+    
+    <meta name="description" content="Represents the configuration options for the NMS AMQP client, including connection string and redelivery policy.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/codersrealm-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.AmqpClient.ClientOptions">
+
+
+
+  <h1 id="CodersRealm_AmqpClient_ClientOptions" data-uid="CodersRealm.AmqpClient.ClientOptions" class="text-break">Class ClientOptions</h1>
+  <div class="markdown level0 summary"><p>Represents the configuration options for the NMS AMQP client, including connection string and redelivery policy.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">ClientOptions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.AmqpClient.html">AmqpClient</a></h6>
+  <h6><strong>Assembly</strong>: CodersRealm.AmqpClient.dll</h6>
+  <h5 id="CodersRealm_AmqpClient_ClientOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ClientOptions</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_AmqpVhosts_" data-uid="CodersRealm.AmqpClient.ClientOptions.AmqpVhosts*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_AmqpVhosts" data-uid="CodersRealm.AmqpClient.ClientOptions.AmqpVhosts">AmqpVhosts</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the virtual hosts (vhosts) to connect to on the AMQP brokers. This can be a single vhost or
+multiple vhosts for failover scenarios. Do not url encode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[]? AmqpVhosts { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_ClientId_" data-uid="CodersRealm.AmqpClient.ClientOptions.ClientId*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_ClientId" data-uid="CodersRealm.AmqpClient.ClientOptions.ClientId">ClientId</h4>
+  <div class="markdown level1 summary"><p>The client id that is applied to the connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ClientId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_ClientIdPrefix_" data-uid="CodersRealm.AmqpClient.ClientOptions.ClientIdPrefix*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_ClientIdPrefix" data-uid="CodersRealm.AmqpClient.ClientOptions.ClientIdPrefix">ClientIdPrefix</h4>
+  <div class="markdown level1 summary"><p>Optional prefix value that is used for generated Client ID values when a new Connection is created for the
+internal ConnectionFactory.
+The default prefix is 'ID:'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ClientIdPrefix { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_ConnectionIdPrefix_" data-uid="CodersRealm.AmqpClient.ClientOptions.ConnectionIdPrefix*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_ConnectionIdPrefix" data-uid="CodersRealm.AmqpClient.ClientOptions.ConnectionIdPrefix">ConnectionIdPrefix</h4>
+  <div class="markdown level1 summary"><p>Optional prefix value that is used for generated Connection ID values when a new Connection is created for the
+internal ConnectionFactory.
+This connection ID is used when logging some information from the connection object so a configurable prefix
+can make breadcrumbing the logs easier.
+The default prefix is 'ID:'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ConnectionIdPrefix { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_ConnectionString_" data-uid="CodersRealm.AmqpClient.ClientOptions.ConnectionString*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_ConnectionString" data-uid="CodersRealm.AmqpClient.ClientOptions.ConnectionString">ConnectionString</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the connection string used to establish the AMQP connection. If set then all other connection
+settings are ignored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ConnectionString { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_EnableFailOver_" data-uid="CodersRealm.AmqpClient.ClientOptions.EnableFailOver*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_EnableFailOver" data-uid="CodersRealm.AmqpClient.ClientOptions.EnableFailOver">EnableFailOver</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether failover is enabled for the AMQP connection. If true, the client will
+attempt to connect to alternative brokers in case of connection failures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? EnableFailOver { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_FailoverInitialReconnectDelay_" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverInitialReconnectDelay*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_FailoverInitialReconnectDelay" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverInitialReconnectDelay">FailoverInitialReconnectDelay</h4>
+  <div class="markdown level1 summary"><p>The amount of time the client will wait before the first attempt to reconnect to a remote peer. The default
+value is zero, meaning the first attempt happens immediately.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? FailoverInitialReconnectDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_FailoverMaxReconnectAttempts_" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverMaxReconnectAttempts*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_FailoverMaxReconnectAttempts" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverMaxReconnectAttempts">FailoverMaxReconnectAttempts</h4>
+  <div class="markdown level1 summary"><p>The number of reconnection attempts allowed before reporting the connection as failed to the client.
+The default is no limit or (-1).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? FailoverMaxReconnectAttempts { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_FailoverMaxReconnectDelay_" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverMaxReconnectDelay*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_FailoverMaxReconnectDelay" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverMaxReconnectDelay">FailoverMaxReconnectDelay</h4>
+  <div class="markdown level1 summary"><p>The maximum time that the client will wait before attempting a reconnect. This value is only used when the
+backoff feature is enabled to ensure that the delay doesn't not grow too large. Defaults to 30 seconds as the
+max time between connect attempts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? FailoverMaxReconnectDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_FailoverReconnectBackOffMultiplier_" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverReconnectBackOffMultiplier*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_FailoverReconnectBackOffMultiplier" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverReconnectBackOffMultiplier">FailoverReconnectBackOffMultiplier</h4>
+  <div class="markdown level1 summary"><p>The multiplier used to grow the reconnection delay value, defaults to 2.0d.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? FailoverReconnectBackOffMultiplier { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_FailoverReconnectDelay_" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverReconnectDelay*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_FailoverReconnectDelay" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverReconnectDelay">FailoverReconnectDelay</h4>
+  <div class="markdown level1 summary"><p>Controls the delay between successive reconnection attempts, defaults to 10 milliseconds. If the backoff option
+is not enabled this value remains constant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? FailoverReconnectDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_FailoverReconnectDelayRandomFactor_" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverReconnectDelayRandomFactor*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_FailoverReconnectDelayRandomFactor" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverReconnectDelayRandomFactor">FailoverReconnectDelayRandomFactor</h4>
+  <div class="markdown level1 summary"><p>Reconnect backoff random factor. 0 means no randomisation. 0.5 would mean backoff time could be (pseudo)
+randomly between 0.5 and 1.5 of normal reconnect backoff time. 1 would mean backoff time could be between 0 and
+2x normal reconnect backoff. 2 would mean backoff time between 0 and 3x normal backoff, and so on.
+Default value is 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? FailoverReconnectDelayRandomFactor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_FailoverStartupMaxReconnectAttempts_" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverStartupMaxReconnectAttempts*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_FailoverStartupMaxReconnectAttempts" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverStartupMaxReconnectAttempts">FailoverStartupMaxReconnectAttempts</h4>
+  <div class="markdown level1 summary"><p>For a client that has never connected to a remote peer before this option control how many attempts are made to
+connect before reporting the connection as failed. The default is to use the value of maxReconnectAttempts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? FailoverStartupMaxReconnectAttempts { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_FailoverUseReconnectBackOff_" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverUseReconnectBackOff*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_FailoverUseReconnectBackOff" data-uid="CodersRealm.AmqpClient.ClientOptions.FailoverUseReconnectBackOff">FailoverUseReconnectBackOff</h4>
+  <div class="markdown level1 summary"><p>Controls whether the time between reconnection attempts should grow based on a configured multiplier. This
+option defaults to true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? FailoverUseReconnectBackOff { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_HostNames_" data-uid="CodersRealm.AmqpClient.ClientOptions.HostNames*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_HostNames" data-uid="CodersRealm.AmqpClient.ClientOptions.HostNames">HostNames</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the host names of the AMQP brokers to connect to. This can be a single host or multiple hosts for
+failover scenarios.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[]? HostNames { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_LocalMessageExpiry_" data-uid="CodersRealm.AmqpClient.ClientOptions.LocalMessageExpiry*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_LocalMessageExpiry" data-uid="CodersRealm.AmqpClient.ClientOptions.LocalMessageExpiry">LocalMessageExpiry</h4>
+  <div class="markdown level1 summary"><p>An option that controls whether consumers and subscribes will filter out and destroy expired messages that are
+already sitting inside its prefetch buffer, or deliver them to your code anyway.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? LocalMessageExpiry { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td><p>By default this value is set to true and expired messages will be filtered.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_MaxNewConnectionRatePerSec_" data-uid="CodersRealm.AmqpClient.ClientOptions.MaxNewConnectionRatePerSec*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_MaxNewConnectionRatePerSec" data-uid="CodersRealm.AmqpClient.ClientOptions.MaxNewConnectionRatePerSec">MaxNewConnectionRatePerSec</h4>
+  <div class="markdown level1 summary"><p>The rate limit for how fast connections to the message broker are created. It is used to prevent connection storms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? MaxNewConnectionRatePerSec { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</td>
+        <td><p>The default is -1 which means unlimited. Otherwise set to a positvie number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_Password_" data-uid="CodersRealm.AmqpClient.ClientOptions.Password*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_Password" data-uid="CodersRealm.AmqpClient.ClientOptions.Password">Password</h4>
+  <div class="markdown level1 summary"><p>The password used to authenticate the connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Password { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_Ports_" data-uid="CodersRealm.AmqpClient.ClientOptions.Ports*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_Ports" data-uid="CodersRealm.AmqpClient.ClientOptions.Ports">Ports</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the port numbers corresponding to the host names for the AMQP connection. This can be a single
+port or multiple ports for failover scenarios.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort[]? Ports { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_PrefetchPolicy_" data-uid="CodersRealm.AmqpClient.ClientOptions.PrefetchPolicy*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_PrefetchPolicy" data-uid="CodersRealm.AmqpClient.ClientOptions.PrefetchPolicy">PrefetchPolicy</h4>
+  <div class="markdown level1 summary"><p>Sets the initial AMQP &quot;link credit&quot; (the prefetch size) for all message consumers and subscribers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? PrefetchPolicy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td><p>The default is 1000. Range: 0 to 2,147,483,647</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_RedeliveryPolicy_" data-uid="CodersRealm.AmqpClient.ClientOptions.RedeliveryPolicy*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_RedeliveryPolicy" data-uid="CodersRealm.AmqpClient.ClientOptions.RedeliveryPolicy">RedeliveryPolicy</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the redelivery policy for message processing, which defines how messages are redelivered in case
+of failures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRedeliveryPolicy? RedeliveryPolicy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.IRedeliveryPolicy.html">IRedeliveryPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_RequestTimeout_" data-uid="CodersRealm.AmqpClient.ClientOptions.RequestTimeout*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_RequestTimeout" data-uid="CodersRealm.AmqpClient.ClientOptions.RequestTimeout">RequestTimeout</h4>
+  <div class="markdown level1 summary"><p>The timeout value that controls how long the client waits on completion of various blocking interactions before
+returning an error.
+By default the client will wait indefinitely for a request to complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? RequestTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_TransportReceiveBufferSize_" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportReceiveBufferSize*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_TransportReceiveBufferSize" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportReceiveBufferSize">TransportReceiveBufferSize</h4>
+  <div class="markdown level1 summary"><p>Specifies the SendBufferSize option of the TCP socket.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? TransportReceiveBufferSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_TransportReceiveTimeout_" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportReceiveTimeout*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_TransportReceiveTimeout" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportReceiveTimeout">TransportReceiveTimeout</h4>
+  <div class="markdown level1 summary"><p>Specifies the ReceiveTimeout option of the TCP socket.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? TransportReceiveTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_TransportSendBufferSize_" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportSendBufferSize*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_TransportSendBufferSize" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportSendBufferSize">TransportSendBufferSize</h4>
+  <div class="markdown level1 summary"><p>Specifies the ReceiveBufferSize option of the TCP socket.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? TransportSendBufferSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_TransportSendTimeout_" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportSendTimeout*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_TransportSendTimeout" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportSendTimeout">TransportSendTimeout</h4>
+  <div class="markdown level1 summary"><p>Specifies the SendTimeout option of the TCP socket.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? TransportSendTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_TransportTcpKeepAliveInterval_" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportTcpKeepAliveInterval*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_TransportTcpKeepAliveInterval" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportTcpKeepAliveInterval">TransportTcpKeepAliveInterval</h4>
+  <div class="markdown level1 summary"><p>Specifies how often a keep-alive transmission is sent when no response is received from previous keep-alive
+transmissions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? TransportTcpKeepAliveInterval { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_TransportTcpKeepAliveTime_" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportTcpKeepAliveTime*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_TransportTcpKeepAliveTime" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportTcpKeepAliveTime">TransportTcpKeepAliveTime</h4>
+  <div class="markdown level1 summary"><p>Specifies how often a keep-alive transmission is sent to an idle connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? TransportTcpKeepAliveTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_TransportTcpNoDelay_" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportTcpNoDelay*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_TransportTcpNoDelay" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportTcpNoDelay">TransportTcpNoDelay</h4>
+  <div class="markdown level1 summary"><p>Specifies the NoDelay option of the TCP socket.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? TransportTcpNoDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_UseSslTls_" data-uid="CodersRealm.AmqpClient.ClientOptions.UseSslTls*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_UseSslTls" data-uid="CodersRealm.AmqpClient.ClientOptions.UseSslTls">UseSslTls</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether SSL/TLS should be used for the AMQP connection. If true, the connection
+will be secured using SSL/TLS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? UseSslTls { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ClientOptions_UserName_" data-uid="CodersRealm.AmqpClient.ClientOptions.UserName*"></a>
+  <h4 id="CodersRealm_AmqpClient_ClientOptions_UserName" data-uid="CodersRealm.AmqpClient.ClientOptions.UserName">UserName</h4>
+  <div class="markdown level1 summary"><p>The user name used to authenticate the connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? UserName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
