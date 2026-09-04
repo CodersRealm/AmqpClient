@@ -4,9 +4,10 @@ on:
     types: [published] # Fires when releases is created
 
 jobs:
-  deploy-to-production:
+  publish_package:
+    name: "🚀 Publish Package to NuGet" # <-- This shows up in the approval prompt!
     runs-on: ubuntu-latest
-    environment: production  # Triggers the Manual Approval rule
+    environment: production    # Triggers the Manual Approval rule
     permissions:
       id-token: write
       contents: read
