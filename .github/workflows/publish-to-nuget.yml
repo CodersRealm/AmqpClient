@@ -1,0 +1,39 @@
+name: publish-to-nuget
+on:
+  release:
+    types: [published, prereleased] # fires for both final releases and pre-releases
+
+jobs:
+  publish_sandbox:
+    name: "🧪 Publish Package to NuGet Sandbox"
+    runs-on: ubuntu-latest
+    if: github.event.release.prerelease == true || github.event.release.prerelease == false  # Sandbox runs for both pre-release and final release
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v6.0.0
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Fetch NuGet Asset from Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release download ${{ github.event.release.tag_name }} --pattern "*.nupkg" --dir ./packages --repo ${{ github.repository }}
+
+      - name: NuGet login (OIDC → temp API key)
+        uses: NuGet/login@v1.2.0
+        id: login
+        with:
+          user: CodersRealm # ${{ secrets.NUGETTEST_USER }}
+          token-service-url: https://int.nugettest.org/api/v2/token
+          audience: https://int.nugettest.org          
+    
+      # Push the package
+      - name: NuGetTest push
+        run: |
+          dotnet nuget push "./packages/*.nupkg" --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://apiint.nugettest.org/v3/index.json
+
