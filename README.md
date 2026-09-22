@@ -1,15 +1,17 @@
 # CodersRealm.AmqpClient
 
-A simple, modern .NET message broker client. This library simplifies working with message queues and topics by providing a single, unified client for any AMQP-compatible message broker.
+A simple, modern .NET message broker client. This library simplifies working with message queues and topics by providing a single, unified client for any AMQP 1.0 - compatible message broker <sup>*</sup>.
 
 ## ✨ Key Features
 
 ✅ **Simple API** - Clean, modern .NET API with async/await  
 ✅ **Dependency Injection** - Full DI support with hosted service lifecycle  
-✅ **Multiple Brokers** - Works with RabbitMQ, Azure Service Bus, ActiveMQ, Artemis  
+✅ **Multiple Brokers** - Works with RabbitMQ, Azure Service Bus, ActiveMQ, Artemis, AmazonMQ  
 ✅ **Patterns** - Send/Receive, Pub/Sub, Request/Response  
 ✅ **Reliability** - Auto-reconnection, acknowledgments, transactions  
 ✅ **Type-Safe** - Strongly-typed message handling
+
+<sup>*<small>Not all AMQPClient features are supported by all message brokers.</small></sup>
 
 ## Install the Package
 
@@ -43,7 +45,7 @@ Inject the library interface into your `Worker.cs` background service constructo
 ```csharp
 using CodersRealm.AmqpClient;
 
-public class Worker(ILogger<Worker> logger, IClient client) : BackgroundService
+public class Worker(ILogger<Worker> logger, IAmqpClient client) : BackgroundService
 {
 	protected override async Task ExecuteAsync(CancellationToken stoppingToken)
 	{
@@ -66,7 +68,6 @@ public class Worker(ILogger<Worker> logger, IClient client) : BackgroundService
 				if (e.Message is ITextMessage textMsg)
 				{
 					logger.LogInformation("Received: {Text}", textMsg.Text);
-					await ProcessMessageAsync(textMsg); // best to return fast
 				}
 			}
 		);
@@ -87,7 +88,7 @@ using CodersRealm.AmqpClient;
 
 string conn = "amqps://myServiceBusNamespace.servicebus.windows.net?username=mySasPolicyName&password=myUrlEncocdedSasKeyValue";
 
-await using var client = new Client(conn);
+await using var client = new AmqpClientFactory(conn);
 await client.StartAsync();
 
 // producer or consumer or subscriber code here
@@ -154,10 +155,10 @@ var producerOptions = new ProducerOptions
 	QueueName = "request-queue" // where the producer sends the request messages
 };
 
-// Options for creating the consumer portion of the Requester that will be processing the response messages
-var responseMessageConsumerOptions = new ConsumerOptions
+// Options for creating the consumer portion of the Requester that will be processing the reply messages
+var replyMessageConsumerOptions = new ConsumerOptions
 {
-	QueueName = "response-queue", // The queue for the response messages
+	QueueName = "reply-queue", // The queue for the reply messages
 	MessageHandler = async (messageQueueEventArgs, token) =>
 	{
 		if (messageQueueEventArgs.Message is ITextMessage textMessage)
@@ -168,12 +169,12 @@ var responseMessageConsumerOptions = new ConsumerOptions
 };
 
 // Create the Requester (producer + consumer)
-var requester = await client.Producers.CreateAsync(producerOptions, responseMessageConsumerOptions);
+var requester = await client.Producers.CreateAsync(producerOptions, replyMessageConsumerOptions);
 
 // Send request
 var requestMsg = await requester.CreateTextMessageAsync("Get User Details");
 requestMsg.CorrelationID = Guid.NewGuid().ToString();
-requestMsg.ReplyTo = await requester.GetQueueAsync("response-queue"); // tell responder where to send the response message.
+requestMsg.ReplyTo = await requester.GetQueueAsync("reply-queue"); // tell the replier where to send the reply message.
 await requester.SendMessageAsync(requestMsg);
 ```
 
@@ -192,7 +193,7 @@ var consumerOptions = new ConsumerOptions
 		{
 			logger.LogInformation("Request Message: {Text}", requestMessage.Text);
 
-			// Modify the message payload to return it as a response
+			// Modify the message payload to return it as a reply message
 			requestMessage.ClearBody();
 			requestMessage.Text = "The Response Message That Has The User Details";
 			messageQueueEventArgs.ResponseMessage = requestMessage;
@@ -200,15 +201,15 @@ var consumerOptions = new ConsumerOptions
 	}
 };
 
-// Options for creating the producer that will be sending the response messages
-var responderOptions = new ResponderOptions
+// Options for creating the producer that will be sending the reply messages
+var replierOptions = new ResponderOptions
 {
 	ResponseDestinationType = ResponseDestinationType.Queue,
-	ResponseQueueName = "response-queue"
+	ResponseQueueName = "reply-queue"
 };
 
-// Create the responder (consumer + producer)
-var responder = await client.Consumers.CreateAsync(consumerOptions, responderOptions);
+// Create the replier (consumer + producer)
+var replier = await client.Consumers.CreateAsync(consumerOptions, replierOptions);
 
 ```
 
@@ -274,10 +275,10 @@ builder.Services.AddAmqpClient(options =>
 - Provision parallel consumer instances to distribute concurrent processing loads.
 
 ## 🤝 Support and Feedback
-- **[Issues](https://github.com/CodersRealm/AmqpClient-Docs/issues)**: Report bugs or request features
-- **[Discussions](https://github.com/CodersRealm/AmqpClient-Docs/discussions)**: Ask questions and share ideas
-- **[API](https://codersrealm.github.io/AmqpClient-Docs/api/CodersRealm.AmqpClient.html)**: View the API documentation
-- **[Examples](https://github.com/CodersRealm/AmqpClient-Docs)**: View the examples for more patterns
+- **[Issues](https://github.com/CodersRealm/AmqpClient/issues)**: Report bugs or request features
+- **[Discussions](https://github.com/CodersRealm/AmqpClient/discussions)**: Ask questions and share ideas
+- **[API](https://codersrealm.github.io/AmqpClient/api/CodersRealm.AmqpClient.html)**: View the API documentation
+- **[Examples](https://github.com/CodersRealm/AmqpClient)**: View the examples for more patterns
 
 
 ## 📄 License & Usage Tiers
