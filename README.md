@@ -1,6 +1,6 @@
 # CodersRealm.AmqpClient
 
-A simple, modern .NET message broker client. This library simplifies working with message queues and topics by providing a single, unified client for any AMQP 1.0 - compatible message broker[^1].
+A simple, modern .NET message broker client. This library simplifies working with message queues and topics by providing a single, unified client for any AMQP 1.0 - compatible message broker*.
 
 ## ✨ Key Features
 
@@ -11,7 +11,7 @@ A simple, modern .NET message broker client. This library simplifies working wit
 ✅ **Reliability** - Auto-reconnection, acknowledgments, transactions  
 ✅ **Type-Safe** - Strongly-typed message handling
 
-<sup>*<small>Not all AMQPClient features are supported by all message brokers.</small></sup>
+\* _Not all AMQPClient features are supported by all message brokers._
 
 ## Install the Package
 
@@ -306,6 +306,3 @@ If your corporate entity generates **\$10,000 USD or more** in gross annual reve
 *Disclaimer: The software is provided "AS IS", without warranty of any kind. Licensor shall not be liable for any damages arising out of the use or inability to use this product.*
 
 **Happy Messaging!** 🚀
-
-
-[^1]: Not all AMQPClient features are supported by all message brokers.
