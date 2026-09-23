@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
       <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:navrel" content="">
       <meta property="docfx:tocrel" content="toc.html">
     
     
@@ -118,13 +118,13 @@
 
 
   <a id="CodersRealm_AmqpClient_ConsumerOptions__ctor_" data-uid="CodersRealm.AmqpClient.ConsumerOptions.#ctor*"></a>
-  <h4 id="CodersRealm_AmqpClient_ConsumerOptions__ctor_CodersRealm_AmqpClient_IQueue_System_String_System_String_System_Boolean_CodersRealm_AmqpClient_AcknowledgementMode_CodersRealm_AmqpClient_MessageProcessorAsync_CodersRealm_AmqpClient_ErrorHandlerAsync_" data-uid="CodersRealm.AmqpClient.ConsumerOptions.#ctor(CodersRealm.AmqpClient.IQueue,System.String,System.String,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)">ConsumerOptions(IQueue?, string?, string?, bool, AcknowledgementMode, MessageProcessorAsync?, ErrorHandlerAsync?)</h4>
+  <h4 id="CodersRealm_AmqpClient_ConsumerOptions__ctor_CodersRealm_AmqpClient_IQueue_System_String_System_String_System_Boolean_CodersRealm_AmqpClient_AcknowledgementMode_System_Boolean_CodersRealm_AmqpClient_MessageProcessorAsync_CodersRealm_AmqpClient_ErrorHandlerAsync_" data-uid="CodersRealm.AmqpClient.ConsumerOptions.#ctor(CodersRealm.AmqpClient.IQueue,System.String,System.String,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,System.Boolean,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)">ConsumerOptions(IQueue?, string?, string?, bool, AcknowledgementMode, bool, MessageProcessorAsync?, ErrorHandlerAsync?)</h4>
   <div class="markdown level1 summary"><p>Options for configuring a message consumer of a queue.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerOptions(IQueue? Queue = null, string? QueueName = null, string? MessageSelector = null, bool NoLocalMessages = false, AcknowledgementMode AcknowledgementMode = AcknowledgementMode.AutoAcknowledge, MessageProcessorAsync? OnMessageReceivedAsync = null, ErrorHandlerAsync? OnErrorAsync = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ConsumerOptions(IQueue? Queue = null, string? QueueName = null, string? MessageSelector = null, bool NoLocalMessages = false, AcknowledgementMode AcknowledgementMode = AcknowledgementMode.AutoAcknowledge, bool UseConcurrency = false, MessageProcessorAsync? OnMessageReceivedAsync = null, ErrorHandlerAsync? OnErrorAsync = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -157,13 +157,19 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">NoLocalMessages</span></td>
-        <td><p>If true, messages published from the same connection (local messages) will not be delivered to this consumer.</p>
+        <td><p>When true, messages published by the same connection that created the subscriber will not be delivered to it. Defaults to <code>false</code>.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="CodersRealm.AmqpClient.AcknowledgementMode.html">AcknowledgementMode</a></td>
         <td><span class="parametername">AcknowledgementMode</span></td>
         <td><p>The acknowledgement mode used by the consumer. Defaults to <a class="xref" href="CodersRealm.AmqpClient.AcknowledgementMode.html#CodersRealm_AmqpClient_AcknowledgementMode_AutoAcknowledge">AutoAcknowledge</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">UseConcurrency</span></td>
+        <td><p>When true, messages will be processed concurrently. Default is false.</p>
 </td>
       </tr>
       <tr>
@@ -238,7 +244,7 @@
 
   <a id="CodersRealm_AmqpClient_ConsumerOptions_NoLocalMessages_" data-uid="CodersRealm.AmqpClient.ConsumerOptions.NoLocalMessages*"></a>
   <h4 id="CodersRealm_AmqpClient_ConsumerOptions_NoLocalMessages" data-uid="CodersRealm.AmqpClient.ConsumerOptions.NoLocalMessages">NoLocalMessages</h4>
-  <div class="markdown level1 summary"><p>If true, messages published from the same connection (local messages) will not be delivered to this consumer.</p>
+  <div class="markdown level1 summary"><p>When true, messages published by the same connection that created the subscriber will not be delivered to it. Defaults to <code>false</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -360,6 +366,32 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_ConsumerOptions_UseConcurrency_" data-uid="CodersRealm.AmqpClient.ConsumerOptions.UseConcurrency*"></a>
+  <h4 id="CodersRealm_AmqpClient_ConsumerOptions_UseConcurrency" data-uid="CodersRealm.AmqpClient.ConsumerOptions.UseConcurrency">UseConcurrency</h4>
+  <div class="markdown level1 summary"><p>When true, messages will be processed concurrently. Default is false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseConcurrency { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>

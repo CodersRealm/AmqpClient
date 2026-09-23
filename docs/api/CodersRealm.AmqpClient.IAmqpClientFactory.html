@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Interface IDestination | CodersRealm Docs </title>
+      <title>Interface IAmqpClientFactory | CodersRealm Docs </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Interface IDestination | CodersRealm Docs ">
+      <meta name="title" content="Interface IAmqpClientFactory | CodersRealm Docs ">
     
-    <meta name="description" content="A base interface for destinations such as queues or topics">
+    <meta name="description" content="Defines a factory for creating instances of  with specified configuration options or connection strings.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -66,40 +66,56 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CodersRealm.AmqpClient.IDestination">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.AmqpClient.IAmqpClientFactory">
 
 
 
-  <h1 id="CodersRealm_AmqpClient_IDestination" data-uid="CodersRealm.AmqpClient.IDestination" class="text-break">Interface IDestination</h1>
-  <div class="markdown level0 summary"><p>A base interface for destinations such as queues or topics</p>
+  <h1 id="CodersRealm_AmqpClient_IAmqpClientFactory" data-uid="CodersRealm.AmqpClient.IAmqpClientFactory" class="text-break">Interface IAmqpClientFactory</h1>
+  <div class="markdown level0 summary"><p>Defines a factory for creating instances of <a class="xref" href="CodersRealm.AmqpClient.IAmqpClient.html">IAmqpClient</a> with specified configuration options or connection strings.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.AmqpClient.html">AmqpClient</a></h6>
   <h6><strong>Assembly</strong>: CodersRealm.AmqpClient.dll</h6>
-  <h5 id="CodersRealm_AmqpClient_IDestination_syntax">Syntax</h5>
+  <h5 id="CodersRealm_AmqpClient_IAmqpClientFactory_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IDestination : IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IAmqpClientFactory</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="methods">Methods
 </h3>
 
 
-  <a id="CodersRealm_AmqpClient_IDestination_DestinationType_" data-uid="CodersRealm.AmqpClient.IDestination.DestinationType*"></a>
-  <h4 id="CodersRealm_AmqpClient_IDestination_DestinationType" data-uid="CodersRealm.AmqpClient.IDestination.DestinationType">DestinationType</h4>
-  <div class="markdown level1 summary"><p>Gets the type of the destination.</p>
+  <a id="CodersRealm_AmqpClient_IAmqpClientFactory_Create_" data-uid="CodersRealm.AmqpClient.IAmqpClientFactory.Create*"></a>
+  <h4 id="CodersRealm_AmqpClient_IAmqpClientFactory_Create_CodersRealm_AmqpClient_ClientOptions_Microsoft_Extensions_Logging_ILogger_" data-uid="CodersRealm.AmqpClient.IAmqpClientFactory.Create(CodersRealm.AmqpClient.ClientOptions,Microsoft.Extensions.Logging.ILogger)">Create(ClientOptions, ILogger?)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="CodersRealm.AmqpClient.IAmqpClient.html">IAmqpClient</a> based on <a class="xref" href="CodersRealm.AmqpClient.ClientOptions.html">ClientOptions</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DestinationType DestinationType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IAmqpClient Create(ClientOptions options, ILogger? logger = null)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.ClientOptions.html">ClientOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
@@ -109,49 +125,50 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="CodersRealm.AmqpClient.DestinationType.html">DestinationType</a></td>
+        <td><a class="xref" href="CodersRealm.AmqpClient.IAmqpClient.html">IAmqpClient</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
 
 
-  <a id="CodersRealm_AmqpClient_IDestination_IsQueue_" data-uid="CodersRealm.AmqpClient.IDestination.IsQueue*"></a>
-  <h4 id="CodersRealm_AmqpClient_IDestination_IsQueue" data-uid="CodersRealm.AmqpClient.IDestination.IsQueue">IsQueue</h4>
-  <div class="markdown level1 summary"><p>Gets a bool value indicating whether the destination is a queue.</p>
+  <a id="CodersRealm_AmqpClient_IAmqpClientFactory_Create_" data-uid="CodersRealm.AmqpClient.IAmqpClientFactory.Create*"></a>
+  <h4 id="CodersRealm_AmqpClient_IAmqpClientFactory_Create_System_String_CodersRealm_AmqpClient_IRedeliveryPolicy_Microsoft_Extensions_Logging_ILogger_" data-uid="CodersRealm.AmqpClient.IAmqpClientFactory.Create(System.String,CodersRealm.AmqpClient.IRedeliveryPolicy,Microsoft.Extensions.Logging.ILogger)">Create(string, IRedeliveryPolicy?, ILogger?)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="CodersRealm.AmqpClient.IAmqpClient.html">IAmqpClient</a> for the given connection string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsQueue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IAmqpClient Create(string connectionString, IRedeliveryPolicy? redeliveryPolicy = null, ILogger? logger = null)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">connectionString</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CodersRealm.AmqpClient.IRedeliveryPolicy.html">IRedeliveryPolicy</a></td>
+        <td><span class="parametername">redeliveryPolicy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></td>
+        <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-
-
-  <a id="CodersRealm_AmqpClient_IDestination_IsTemporary_" data-uid="CodersRealm.AmqpClient.IDestination.IsTemporary*"></a>
-  <h4 id="CodersRealm_AmqpClient_IDestination_IsTemporary" data-uid="CodersRealm.AmqpClient.IDestination.IsTemporary">IsTemporary</h4>
-  <div class="markdown level1 summary"><p>Gets a bool value indicating whether the destination is temporary.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsTemporary { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
@@ -161,33 +178,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
-
-  <a id="CodersRealm_AmqpClient_IDestination_IsTopic_" data-uid="CodersRealm.AmqpClient.IDestination.IsTopic*"></a>
-  <h4 id="CodersRealm_AmqpClient_IDestination_IsTopic" data-uid="CodersRealm.AmqpClient.IDestination.IsTopic">IsTopic</h4>
-  <div class="markdown level1 summary"><p>Gets a bool value indicating whether the destination is a topic.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsTopic { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><a class="xref" href="CodersRealm.AmqpClient.IAmqpClient.html">IAmqpClient</a></td>
         <td></td>
       </tr>
     </tbody>

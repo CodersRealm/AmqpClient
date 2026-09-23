@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
       <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:navrel" content="">
       <meta property="docfx:tocrel" content="toc.html">
     
     
@@ -78,6 +78,9 @@ Classes
       <h4><a class="xref" href="CodersRealm.AmqpClient.AcknowledgementCommandException.html">AcknowledgementCommandException</a></h4>
       <section><p>Represents an exception that is thrown when an acknowledgement command fails due to an underlying error.</p>
 </section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.AmqpClientFactory.html">AmqpClientFactory</a></h4>
+      <section><p>Provides a factory for creating instances of <a class="xref" href="CodersRealm.AmqpClient.IAmqpClient.html">IAmqpClient</a> with specified configuration options or connection strings.</p>
+</section>
       <h4><a class="xref" href="CodersRealm.AmqpClient.AmqpException.html">AmqpException</a></h4>
       <section><p>Represents an NMS exception</p>
 </section>
@@ -85,11 +88,6 @@ Classes
       <section><p>Represents a security-related failure that occurs while using the AMQP client.
 This exception is thrown when an operation is denied due to authentication,
 authorization, or other security checks performed by the broker or client.</p>
-</section>
-      <h4><a class="xref" href="CodersRealm.AmqpClient.Client.html">Client</a></h4>
-      <section><p>Represents a reusable AMQP client that manages an underlying connection and provides access to message broker
-producers, consumers and subscribers. The client is safe for concurrent use and supports asynchronous startup and
-disposal.</p>
 </section>
       <h4><a class="xref" href="CodersRealm.AmqpClient.ClientOptions.html">ClientOptions</a></h4>
       <section><p>Represents the configuration options for the NMS AMQP client, including connection string and redelivery policy.</p>
@@ -153,9 +151,8 @@ when the message payload cannot be accessed for reading.</p>
 This occurs for messages that are in a read-only state or when the message
 content cannot be modified (for example after the message has been sent).</p>
 </section>
-      <h4><a class="xref" href="CodersRealm.AmqpClient.MessageQueueEventArgs.html">MessageQueueEventArgs</a></h4>
-      <section><p>Provides data for events raised when a message is queued, processed or otherwise
-observed by the consumer pipeline.</p>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.MessageReceivedContext.html">MessageReceivedContext</a></h4>
+      <section><p>Represents the context of a received AMQP message, including the message itself, the action to be taken, and an optional reply message.</p>
 </section>
       <h4><a class="xref" href="CodersRealm.AmqpClient.ProducerOptions.html">ProducerOptions</a></h4>
       <section><p>Options used to configure a message producer.</p>
@@ -163,16 +160,16 @@ observed by the consumer pipeline.</p>
       <h4><a class="xref" href="CodersRealm.AmqpClient.RedeliveryPolicy.html">RedeliveryPolicy</a></h4>
       <section><p>A policy used to customize exactly how you want the redelivery to work.</p>
 </section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html">ReplierOptions</a></h4>
+      <section><p>Configuration options that control where and how a replier sends reply messages.
+These options allow specifying an explicit <a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a>, or alternatively
+a destination name and type to be used when creating the reply destination.</p>
+</section>
       <h4><a class="xref" href="CodersRealm.AmqpClient.ResourceAllocationException.html">ResourceAllocationException</a></h4>
       <section><p>Represents a failure that occurs when required resources cannot be allocated.</p>
 </section>
-      <h4><a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html">ResponderOptions</a></h4>
-      <section><p>Configuration options that control where and how a responder sends reply messages.
-These options allow specifying an explicit <a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a>, or alternatively
-a destination name and type to be used when creating the response destination.</p>
-</section>
-      <h4><a class="xref" href="CodersRealm.AmqpClient.SendResponseException.html">SendResponseException</a></h4>
-      <section><p>Represents an exception that is thrown when an error occurs while sending a response message.</p>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.SendReplyException.html">SendReplyException</a></h4>
+      <section><p>Represents an exception that is thrown when an error occurs while sending a reply message.</p>
 </section>
       <h4><a class="xref" href="CodersRealm.AmqpClient.ServiceCollectionExtensions.html">ServiceCollectionExtensions</a></h4>
       <section><p>Provides extension methods for <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> to register NMS AMQP client services.</p>
@@ -209,6 +206,12 @@ Interfaces
       <section><p>Represents a consumer that supports explicit acknowledge and negative acknowledge
 operations (e.g. ClientAcknowledge or IndividualAcknowledge modes).</p>
 </section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IAmqpClient.html">IAmqpClient</a></h4>
+      <section><p>Represents a client that manages AMQP connection lifecycle and related producer/consumer/subscriber managers.</p>
+</section>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.IAmqpClientFactory.html">IAmqpClientFactory</a></h4>
+      <section><p>Defines a factory for creating instances of <a class="xref" href="CodersRealm.AmqpClient.IAmqpClient.html">IAmqpClient</a> with specified configuration options or connection strings.</p>
+</section>
       <h4><a class="xref" href="CodersRealm.AmqpClient.IBytesMessage.html">IBytesMessage</a></h4>
       <section><p>A BytesMessage object is used to send a message containing a stream of uninterpreted
 bytes. It inherits from the Message interface and adds a bytes message body. The
@@ -230,9 +233,6 @@ the message is in write-only mode.</p>
 is thrown.</p>
 <p>If a client attempts to write a message in read-only mode, a MessageNotWriteableException
 is thrown.</p>
-</section>
-      <h4><a class="xref" href="CodersRealm.AmqpClient.IClient.html">IClient</a></h4>
-      <section><p>Represents a client that manages AMQP connection lifecycle and related producer/consumer/subscriber managers.</p>
 </section>
       <h4><a class="xref" href="CodersRealm.AmqpClient.IConsumer.html">IConsumer</a></h4>
       <section><p>Represents a message consumer that can receive messages from a destination (queue or topic) in a messaging system.</p>
@@ -410,8 +410,8 @@ support Persistent and NonPersistent.</p>
       <h4><a class="xref" href="CodersRealm.AmqpClient.MsgPriority.html">MsgPriority</a></h4>
       <section><p>Define an enumerated array of message priorities.</p>
 </section>
-      <h4><a class="xref" href="CodersRealm.AmqpClient.ResponseDestinationType.html">ResponseDestinationType</a></h4>
-      <section><p>Specifies the type of destination to which a response message is sent.</p>
+      <h4><a class="xref" href="CodersRealm.AmqpClient.ReplyDestinationType.html">ReplyDestinationType</a></h4>
+      <section><p>Specifies the type of destination to which a reply message is sent.</p>
 </section>
     <h3 id="delegates">
 Delegates

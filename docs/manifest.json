@@ -42,6 +42,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CodersRealm.AmqpClient.AmqpClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodersRealm.AmqpClient.AmqpClientFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodersRealm.AmqpClient.AmqpClientFactory",
+      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.AmqpClientFactory.yml\" sourcestartlinenumber=\"1\">Provides a factory for creating instances of <xref href=\"CodersRealm.AmqpClient.IAmqpClient\" data-throw-if-not-resolved=\"false\"></xref> with specified configuration options or connection strings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CodersRealm.AmqpClient.AmqpException.yml",
       "output": {
         ".html": {
@@ -67,20 +81,6 @@
       "IsMRef": true,
       "Title": "CodersRealm.AmqpClient.AmqpSecurityException",
       "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.AmqpSecurityException.yml\" sourcestartlinenumber=\"1\">Represents a security-related failure that occurs while using the AMQP client.\nThis exception is thrown when an operation is denied due to authentication,\nauthorization, or other security checks performed by the broker or client.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CodersRealm.AmqpClient.Client.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CodersRealm.AmqpClient.Client.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "CodersRealm.AmqpClient.Client",
-      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.Client.yml\" sourcestartlinenumber=\"1\">Represents a reusable AMQP client that manages an underlying connection and provides access to message broker\nproducers, consumers and subscribers. The client is safe for concurrent use and supports asynchronous startup and\ndisposal.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -196,6 +196,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CodersRealm.AmqpClient.IAmqpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodersRealm.AmqpClient.IAmqpClient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodersRealm.AmqpClient.IAmqpClient",
+      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.IAmqpClient.yml\" sourcestartlinenumber=\"1\">Represents a client that manages AMQP connection lifecycle and related producer/consumer/subscriber managers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodersRealm.AmqpClient.IAmqpClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodersRealm.AmqpClient.IAmqpClientFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodersRealm.AmqpClient.IAmqpClientFactory",
+      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.IAmqpClientFactory.yml\" sourcestartlinenumber=\"1\">Defines a factory for creating instances of <xref href=\"CodersRealm.AmqpClient.IAmqpClient\" data-throw-if-not-resolved=\"false\"></xref> with specified configuration options or connection strings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CodersRealm.AmqpClient.IBytesMessage.yml",
       "output": {
         ".html": {
@@ -207,20 +235,6 @@
       "IsMRef": true,
       "Title": "CodersRealm.AmqpClient.IBytesMessage",
       "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.IBytesMessage.yml\" sourcestartlinenumber=\"1\">A BytesMessage object is used to send a message containing a stream of uninterpreted\nbytes. It inherits from the Message interface and adds a bytes message body. The\nreceiver of the message supplies the interpretation of the bytes.</p>\n<p sourcefile=\"api/CodersRealm.AmqpClient.IBytesMessage.yml\" sourcestartlinenumber=\"5\">This message type is for client encoding of existing message formats. If possible,\none of the other self-defining message types should be used instead.</p>\n<p sourcefile=\"api/CodersRealm.AmqpClient.IBytesMessage.yml\" sourcestartlinenumber=\"8\">Although the NMS API allows the use of message properties with byte messages, they\nare typically not used, since the inclusion of properties may affect the format.</p>\n<p sourcefile=\"api/CodersRealm.AmqpClient.IBytesMessage.yml\" sourcestartlinenumber=\"11\">When the message is first created, and when ClearBody is called, the body of the\nmessage is in write-only mode. After the first call to Reset has been made, the\nmessage body is in read-only mode. After a message has been sent, the client that\nsent it can retain and modify it without affecting the message that has been sent.\nThe same message object can be sent multiple times. When a message has been received,\nthe provider has called Reset so that the message body is in read-only mode for the\nclient.</p>\n<p sourcefile=\"api/CodersRealm.AmqpClient.IBytesMessage.yml\" sourcestartlinenumber=\"19\">If ClearBody is called on a message in read-only mode, the message body is cleared and\nthe message is in write-only mode.</p>\n<p sourcefile=\"api/CodersRealm.AmqpClient.IBytesMessage.yml\" sourcestartlinenumber=\"22\">If a client attempts to read a message in write-only mode, a MessageNotReadableException\nis thrown.</p>\n<p sourcefile=\"api/CodersRealm.AmqpClient.IBytesMessage.yml\" sourcestartlinenumber=\"25\">If a client attempts to write a message in read-only mode, a MessageNotWriteableException\nis thrown.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CodersRealm.AmqpClient.IClient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CodersRealm.AmqpClient.IClient.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "CodersRealm.AmqpClient.IClient",
-      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.IClient.yml\" sourcestartlinenumber=\"1\">Represents a client that manages AMQP connection lifecycle and related producer/consumer/subscriber managers.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -658,17 +672,17 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CodersRealm.AmqpClient.MessageQueueEventArgs.yml",
+      "source_relative_path": "api/CodersRealm.AmqpClient.MessageReceivedContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CodersRealm.AmqpClient.MessageQueueEventArgs.html"
+          "relative_path": "api/CodersRealm.AmqpClient.MessageReceivedContext.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "CodersRealm.AmqpClient.MessageQueueEventArgs",
-      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.MessageQueueEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for events raised when a message is queued, processed or otherwise\nobserved by the consumer pipeline.</p>\n"
+      "Title": "CodersRealm.AmqpClient.MessageReceivedContext",
+      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.MessageReceivedContext.yml\" sourcestartlinenumber=\"1\">Represents the context of a received AMQP message, including the message itself, the action to be taken, and an optional reply message.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -742,6 +756,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CodersRealm.AmqpClient.ReplierOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodersRealm.AmqpClient.ReplierOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodersRealm.AmqpClient.ReplierOptions",
+      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.ReplierOptions.yml\" sourcestartlinenumber=\"1\">Configuration options that control where and how a replier sends reply messages.\nThese options allow specifying an explicit <xref href=\"CodersRealm.AmqpClient.IDestination\" data-throw-if-not-resolved=\"false\"></xref>, or alternatively\na destination name and type to be used when creating the reply destination.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CodersRealm.AmqpClient.ReplyDestinationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CodersRealm.AmqpClient.ReplyDestinationType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CodersRealm.AmqpClient.ReplyDestinationType",
+      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.ReplyDestinationType.yml\" sourcestartlinenumber=\"1\">Specifies the type of destination to which a reply message is sent.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CodersRealm.AmqpClient.ResourceAllocationException.yml",
       "output": {
         ".html": {
@@ -756,45 +798,17 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CodersRealm.AmqpClient.ResponderOptions.yml",
+      "source_relative_path": "api/CodersRealm.AmqpClient.SendReplyException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CodersRealm.AmqpClient.ResponderOptions.html"
+          "relative_path": "api/CodersRealm.AmqpClient.SendReplyException.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "CodersRealm.AmqpClient.ResponderOptions",
-      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.ResponderOptions.yml\" sourcestartlinenumber=\"1\">Configuration options that control where and how a responder sends reply messages.\nThese options allow specifying an explicit <xref href=\"CodersRealm.AmqpClient.IDestination\" data-throw-if-not-resolved=\"false\"></xref>, or alternatively\na destination name and type to be used when creating the response destination.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CodersRealm.AmqpClient.ResponseDestinationType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CodersRealm.AmqpClient.ResponseDestinationType.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "CodersRealm.AmqpClient.ResponseDestinationType",
-      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.ResponseDestinationType.yml\" sourcestartlinenumber=\"1\">Specifies the type of destination to which a response message is sent.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CodersRealm.AmqpClient.SendResponseException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CodersRealm.AmqpClient.SendResponseException.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "CodersRealm.AmqpClient.SendResponseException",
-      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.SendResponseException.yml\" sourcestartlinenumber=\"1\">Represents an exception that is thrown when an error occurs while sending a response message.</p>\n"
+      "Title": "CodersRealm.AmqpClient.SendReplyException",
+      "Summary": "<p sourcefile=\"api/CodersRealm.AmqpClient.SendReplyException.yml\" sourcestartlinenumber=\"1\">Represents an exception that is thrown when an error occurs while sending a reply message.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -922,6 +936,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "configuration.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "images/codersrealm-amqp.png",
       "output": {
@@ -947,19 +971,6 @@
       "output": {
         "resource": {
           "relative_path": "styles/main.css"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
-        ".json": {
-          "relative_path": "toc.json"
         }
       },
       "version": ""

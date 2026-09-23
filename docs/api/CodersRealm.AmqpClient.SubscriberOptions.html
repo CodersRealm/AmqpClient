@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
       <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:navrel" content="">
       <meta property="docfx:tocrel" content="toc.html">
     
     
@@ -118,13 +118,13 @@
 
 
   <a id="CodersRealm_AmqpClient_SubscriberOptions__ctor_" data-uid="CodersRealm.AmqpClient.SubscriberOptions.#ctor*"></a>
-  <h4 id="CodersRealm_AmqpClient_SubscriberOptions__ctor_CodersRealm_AmqpClient_ITopic_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_CodersRealm_AmqpClient_AcknowledgementMode_CodersRealm_AmqpClient_MessageProcessorAsync_CodersRealm_AmqpClient_ErrorHandlerAsync_" data-uid="CodersRealm.AmqpClient.SubscriberOptions.#ctor(CodersRealm.AmqpClient.ITopic,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)">SubscriberOptions(ITopic?, string?, string?, string?, bool, bool, bool, AcknowledgementMode, MessageProcessorAsync?, ErrorHandlerAsync?)</h4>
+  <h4 id="CodersRealm_AmqpClient_SubscriberOptions__ctor_CodersRealm_AmqpClient_ITopic_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_CodersRealm_AmqpClient_AcknowledgementMode_System_Boolean_CodersRealm_AmqpClient_MessageProcessorAsync_CodersRealm_AmqpClient_ErrorHandlerAsync_" data-uid="CodersRealm.AmqpClient.SubscriberOptions.#ctor(CodersRealm.AmqpClient.ITopic,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,System.Boolean,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)">SubscriberOptions(ITopic?, string?, string?, string?, bool, bool, bool, AcknowledgementMode, bool, MessageProcessorAsync?, ErrorHandlerAsync?)</h4>
   <div class="markdown level1 summary"><p>Options used to configure a subscriber to a topic.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SubscriberOptions(ITopic? Topic = null, string? TopicName = null, string? SubscriptionName = null, string? MessageSelector = null, bool NoLocalMessages = false, bool DurableSubscriber = false, bool SharedTopic = false, AcknowledgementMode AcknowledgementMode = AcknowledgementMode.AutoAcknowledge, MessageProcessorAsync? OnMessageReceivedAsync = null, ErrorHandlerAsync? OnErrorAsync = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SubscriberOptions(ITopic? Topic = null, string? TopicName = null, string? SubscriptionName = null, string? MessageSelector = null, bool NoLocalMessages = false, bool DurableSubscriber = false, bool SharedTopic = false, AcknowledgementMode AcknowledgementMode = AcknowledgementMode.AutoAcknowledge, bool UseConcurrency = false, MessageProcessorAsync? OnMessageReceivedAsync = null, ErrorHandlerAsync? OnErrorAsync = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -182,6 +182,12 @@
         <td><a class="xref" href="CodersRealm.AmqpClient.AcknowledgementMode.html">AcknowledgementMode</a></td>
         <td><span class="parametername">AcknowledgementMode</span></td>
         <td><p>The acknowledgement mode to use for the subscriber. Defaults to <a class="xref" href="CodersRealm.AmqpClient.AcknowledgementMode.html#CodersRealm_AmqpClient_AcknowledgementMode_AutoAcknowledge">AutoAcknowledge</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">UseConcurrency</span></td>
+        <td><p>When true, messages will be processed concurrently. Default is false.</p>
 </td>
       </tr>
       <tr>
@@ -456,6 +462,32 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="CodersRealm_AmqpClient_SubscriberOptions_UseConcurrency_" data-uid="CodersRealm.AmqpClient.SubscriberOptions.UseConcurrency*"></a>
+  <h4 id="CodersRealm_AmqpClient_SubscriberOptions_UseConcurrency" data-uid="CodersRealm.AmqpClient.SubscriberOptions.UseConcurrency">UseConcurrency</h4>
+  <div class="markdown level1 summary"><p>When true, messages will be processed concurrently. Default is false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseConcurrency { get; init; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td></td>
       </tr>
     </tbody>

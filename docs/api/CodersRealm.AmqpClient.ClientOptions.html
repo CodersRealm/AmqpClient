@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
       <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:navrel" content="">
       <meta property="docfx:tocrel" content="toc.html">
     
     
@@ -113,7 +113,7 @@
   <a id="CodersRealm_AmqpClient_ClientOptions_AmqpVhosts_" data-uid="CodersRealm.AmqpClient.ClientOptions.AmqpVhosts*"></a>
   <h4 id="CodersRealm_AmqpClient_ClientOptions_AmqpVhosts" data-uid="CodersRealm.AmqpClient.ClientOptions.AmqpVhosts">AmqpVhosts</h4>
   <div class="markdown level1 summary"><p>Gets or sets the virtual hosts (vhosts) to connect to on the AMQP brokers. This can be a single vhost or
-multiple vhosts for failover scenarios. Do not url encode.</p>
+multiple vhosts for failover scenarios.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -165,8 +165,7 @@ multiple vhosts for failover scenarios. Do not url encode.</p>
 
   <a id="CodersRealm_AmqpClient_ClientOptions_ClientIdPrefix_" data-uid="CodersRealm.AmqpClient.ClientOptions.ClientIdPrefix*"></a>
   <h4 id="CodersRealm_AmqpClient_ClientOptions_ClientIdPrefix" data-uid="CodersRealm.AmqpClient.ClientOptions.ClientIdPrefix">ClientIdPrefix</h4>
-  <div class="markdown level1 summary"><p>Optional prefix value that is used for generated Client ID values when a new Connection is created for the
-internal ConnectionFactory.
+  <div class="markdown level1 summary"><p>Optional prefix value that is used for generated Client ID values.
 The default prefix is 'ID:'.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -193,8 +192,7 @@ The default prefix is 'ID:'.</p>
 
   <a id="CodersRealm_AmqpClient_ClientOptions_ConnectionIdPrefix_" data-uid="CodersRealm.AmqpClient.ClientOptions.ConnectionIdPrefix*"></a>
   <h4 id="CodersRealm_AmqpClient_ClientOptions_ConnectionIdPrefix" data-uid="CodersRealm.AmqpClient.ClientOptions.ConnectionIdPrefix">ConnectionIdPrefix</h4>
-  <div class="markdown level1 summary"><p>Optional prefix value that is used for generated Connection ID values when a new Connection is created for the
-internal ConnectionFactory.
+  <div class="markdown level1 summary"><p>Optional prefix value that is used for generated Connection ID values when a new Connection is created.
 This connection ID is used when logging some information from the connection object so a configurable prefix
 can make breadcrumbing the logs easier.
 The default prefix is 'ID:'.</p>
@@ -568,7 +566,7 @@ already sitting inside its prefetch buffer, or deliver them to your code anyway.
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</td>
-        <td><p>The default is -1 which means unlimited. Otherwise set to a positvie number.</p>
+        <td><p>The default is -1 (unlimited). Otherwise set to a positvie number.</p>
 </td>
       </tr>
     </tbody>
@@ -712,7 +710,7 @@ By default the client will wait indefinitely for a request to complete.</p>
 
   <a id="CodersRealm_AmqpClient_ClientOptions_TransportReceiveBufferSize_" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportReceiveBufferSize*"></a>
   <h4 id="CodersRealm_AmqpClient_ClientOptions_TransportReceiveBufferSize" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportReceiveBufferSize">TransportReceiveBufferSize</h4>
-  <div class="markdown level1 summary"><p>Specifies the SendBufferSize option of the TCP socket.</p>
+  <div class="markdown level1 summary"><p>Specifies the send buffer size option of the TCP socket.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -738,7 +736,7 @@ By default the client will wait indefinitely for a request to complete.</p>
 
   <a id="CodersRealm_AmqpClient_ClientOptions_TransportReceiveTimeout_" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportReceiveTimeout*"></a>
   <h4 id="CodersRealm_AmqpClient_ClientOptions_TransportReceiveTimeout" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportReceiveTimeout">TransportReceiveTimeout</h4>
-  <div class="markdown level1 summary"><p>Specifies the ReceiveTimeout option of the TCP socket.</p>
+  <div class="markdown level1 summary"><p>Specifies the receive timeout option of the TCP socket.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -764,7 +762,7 @@ By default the client will wait indefinitely for a request to complete.</p>
 
   <a id="CodersRealm_AmqpClient_ClientOptions_TransportSendBufferSize_" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportSendBufferSize*"></a>
   <h4 id="CodersRealm_AmqpClient_ClientOptions_TransportSendBufferSize" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportSendBufferSize">TransportSendBufferSize</h4>
-  <div class="markdown level1 summary"><p>Specifies the ReceiveBufferSize option of the TCP socket.</p>
+  <div class="markdown level1 summary"><p>Specifies the receive buffer size option of the TCP socket.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -790,7 +788,7 @@ By default the client will wait indefinitely for a request to complete.</p>
 
   <a id="CodersRealm_AmqpClient_ClientOptions_TransportSendTimeout_" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportSendTimeout*"></a>
   <h4 id="CodersRealm_AmqpClient_ClientOptions_TransportSendTimeout" data-uid="CodersRealm.AmqpClient.ClientOptions.TransportSendTimeout">TransportSendTimeout</h4>
-  <div class="markdown level1 summary"><p>Specifies the SendTimeout option of the TCP socket.</p>
+  <div class="markdown level1 summary"><p>Specifies the send timeout option of the TCP socket.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

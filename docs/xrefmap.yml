@@ -68,6 +68,56 @@ references:
   commentId: F:CodersRealm.AmqpClient.AcknowledgementMode.Transactional
   fullName: CodersRealm.AmqpClient.AcknowledgementMode.Transactional
   nameWithType: AcknowledgementMode.Transactional
+- uid: CodersRealm.AmqpClient.AmqpClientFactory
+  name: AmqpClientFactory
+  href: api/CodersRealm.AmqpClient.AmqpClientFactory.html
+  commentId: T:CodersRealm.AmqpClient.AmqpClientFactory
+  fullName: CodersRealm.AmqpClient.AmqpClientFactory
+  nameWithType: AmqpClientFactory
+- uid: CodersRealm.AmqpClient.AmqpClientFactory.#ctor
+  name: AmqpClientFactory()
+  href: api/CodersRealm.AmqpClient.AmqpClientFactory.html#CodersRealm_AmqpClient_AmqpClientFactory__ctor
+  commentId: M:CodersRealm.AmqpClient.AmqpClientFactory.#ctor
+  name.vb: New()
+  fullName: CodersRealm.AmqpClient.AmqpClientFactory.AmqpClientFactory()
+  fullName.vb: CodersRealm.AmqpClient.AmqpClientFactory.New()
+  nameWithType: AmqpClientFactory.AmqpClientFactory()
+  nameWithType.vb: AmqpClientFactory.New()
+- uid: CodersRealm.AmqpClient.AmqpClientFactory.#ctor*
+  name: AmqpClientFactory
+  href: api/CodersRealm.AmqpClient.AmqpClientFactory.html#CodersRealm_AmqpClient_AmqpClientFactory__ctor_
+  commentId: Overload:CodersRealm.AmqpClient.AmqpClientFactory.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CodersRealm.AmqpClient.AmqpClientFactory.AmqpClientFactory
+  fullName.vb: CodersRealm.AmqpClient.AmqpClientFactory.New
+  nameWithType: AmqpClientFactory.AmqpClientFactory
+  nameWithType.vb: AmqpClientFactory.New
+- uid: CodersRealm.AmqpClient.AmqpClientFactory.Create(CodersRealm.AmqpClient.ClientOptions,Microsoft.Extensions.Logging.ILogger)
+  name: Create(ClientOptions, ILogger?)
+  href: api/CodersRealm.AmqpClient.AmqpClientFactory.html#CodersRealm_AmqpClient_AmqpClientFactory_Create_CodersRealm_AmqpClient_ClientOptions_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:CodersRealm.AmqpClient.AmqpClientFactory.Create(CodersRealm.AmqpClient.ClientOptions,Microsoft.Extensions.Logging.ILogger)
+  name.vb: Create(ClientOptions, ILogger)
+  fullName: CodersRealm.AmqpClient.AmqpClientFactory.Create(CodersRealm.AmqpClient.ClientOptions, Microsoft.Extensions.Logging.ILogger?)
+  fullName.vb: CodersRealm.AmqpClient.AmqpClientFactory.Create(CodersRealm.AmqpClient.ClientOptions, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: AmqpClientFactory.Create(ClientOptions, ILogger?)
+  nameWithType.vb: AmqpClientFactory.Create(ClientOptions, ILogger)
+- uid: CodersRealm.AmqpClient.AmqpClientFactory.Create(System.String,CodersRealm.AmqpClient.IRedeliveryPolicy,Microsoft.Extensions.Logging.ILogger)
+  name: Create(string, IRedeliveryPolicy?, ILogger?)
+  href: api/CodersRealm.AmqpClient.AmqpClientFactory.html#CodersRealm_AmqpClient_AmqpClientFactory_Create_System_String_CodersRealm_AmqpClient_IRedeliveryPolicy_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:CodersRealm.AmqpClient.AmqpClientFactory.Create(System.String,CodersRealm.AmqpClient.IRedeliveryPolicy,Microsoft.Extensions.Logging.ILogger)
+  name.vb: Create(String, IRedeliveryPolicy, ILogger)
+  fullName: CodersRealm.AmqpClient.AmqpClientFactory.Create(string, CodersRealm.AmqpClient.IRedeliveryPolicy?, Microsoft.Extensions.Logging.ILogger?)
+  fullName.vb: CodersRealm.AmqpClient.AmqpClientFactory.Create(String, CodersRealm.AmqpClient.IRedeliveryPolicy, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: AmqpClientFactory.Create(string, IRedeliveryPolicy?, ILogger?)
+  nameWithType.vb: AmqpClientFactory.Create(String, IRedeliveryPolicy, ILogger)
+- uid: CodersRealm.AmqpClient.AmqpClientFactory.Create*
+  name: Create
+  href: api/CodersRealm.AmqpClient.AmqpClientFactory.html#CodersRealm_AmqpClient_AmqpClientFactory_Create_
+  commentId: Overload:CodersRealm.AmqpClient.AmqpClientFactory.Create
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.AmqpClientFactory.Create
+  nameWithType: AmqpClientFactory.Create
 - uid: CodersRealm.AmqpClient.AmqpException
   name: AmqpException
   href: api/CodersRealm.AmqpClient.AmqpException.html
@@ -216,172 +266,6 @@ references:
   fullName.vb: CodersRealm.AmqpClient.AmqpSecurityException.New
   nameWithType: AmqpSecurityException.AmqpSecurityException
   nameWithType.vb: AmqpSecurityException.New
-- uid: CodersRealm.AmqpClient.Client
-  name: Client
-  href: api/CodersRealm.AmqpClient.Client.html
-  commentId: T:CodersRealm.AmqpClient.Client
-  fullName: CodersRealm.AmqpClient.Client
-  nameWithType: Client
-- uid: CodersRealm.AmqpClient.Client.#ctor(CodersRealm.AmqpClient.ClientOptions,Microsoft.Extensions.Logging.ILogger{CodersRealm.AmqpClient.Client})
-  name: Client(ClientOptions, ILogger<Client>?)
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client__ctor_CodersRealm_AmqpClient_ClientOptions_Microsoft_Extensions_Logging_ILogger_CodersRealm_AmqpClient_Client__
-  commentId: M:CodersRealm.AmqpClient.Client.#ctor(CodersRealm.AmqpClient.ClientOptions,Microsoft.Extensions.Logging.ILogger{CodersRealm.AmqpClient.Client})
-  name.vb: New(ClientOptions, ILogger(Of Client))
-  fullName: CodersRealm.AmqpClient.Client.Client(CodersRealm.AmqpClient.ClientOptions, Microsoft.Extensions.Logging.ILogger<CodersRealm.AmqpClient.Client>?)
-  fullName.vb: CodersRealm.AmqpClient.Client.New(CodersRealm.AmqpClient.ClientOptions, Microsoft.Extensions.Logging.ILogger(Of CodersRealm.AmqpClient.Client))
-  nameWithType: Client.Client(ClientOptions, ILogger<Client>?)
-  nameWithType.vb: Client.New(ClientOptions, ILogger(Of Client))
-- uid: CodersRealm.AmqpClient.Client.#ctor(System.String)
-  name: Client(string)
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client__ctor_System_String_
-  commentId: M:CodersRealm.AmqpClient.Client.#ctor(System.String)
-  name.vb: New(String)
-  fullName: CodersRealm.AmqpClient.Client.Client(string)
-  fullName.vb: CodersRealm.AmqpClient.Client.New(String)
-  nameWithType: Client.Client(string)
-  nameWithType.vb: Client.New(String)
-- uid: CodersRealm.AmqpClient.Client.#ctor(System.String,CodersRealm.AmqpClient.IRedeliveryPolicy,Microsoft.Extensions.Logging.ILogger{CodersRealm.AmqpClient.Client})
-  name: Client(string, IRedeliveryPolicy?, ILogger<Client>?)
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client__ctor_System_String_CodersRealm_AmqpClient_IRedeliveryPolicy_Microsoft_Extensions_Logging_ILogger_CodersRealm_AmqpClient_Client__
-  commentId: M:CodersRealm.AmqpClient.Client.#ctor(System.String,CodersRealm.AmqpClient.IRedeliveryPolicy,Microsoft.Extensions.Logging.ILogger{CodersRealm.AmqpClient.Client})
-  name.vb: New(String, IRedeliveryPolicy, ILogger(Of Client))
-  fullName: CodersRealm.AmqpClient.Client.Client(string, CodersRealm.AmqpClient.IRedeliveryPolicy?, Microsoft.Extensions.Logging.ILogger<CodersRealm.AmqpClient.Client>?)
-  fullName.vb: CodersRealm.AmqpClient.Client.New(String, CodersRealm.AmqpClient.IRedeliveryPolicy, Microsoft.Extensions.Logging.ILogger(Of CodersRealm.AmqpClient.Client))
-  nameWithType: Client.Client(string, IRedeliveryPolicy?, ILogger<Client>?)
-  nameWithType.vb: Client.New(String, IRedeliveryPolicy, ILogger(Of Client))
-- uid: CodersRealm.AmqpClient.Client.#ctor*
-  name: Client
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client__ctor_
-  commentId: Overload:CodersRealm.AmqpClient.Client.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: CodersRealm.AmqpClient.Client.Client
-  fullName.vb: CodersRealm.AmqpClient.Client.New
-  nameWithType: Client.Client
-  nameWithType.vb: Client.New
-- uid: CodersRealm.AmqpClient.Client.ClientId
-  name: ClientId
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_ClientId
-  commentId: P:CodersRealm.AmqpClient.Client.ClientId
-  fullName: CodersRealm.AmqpClient.Client.ClientId
-  nameWithType: Client.ClientId
-- uid: CodersRealm.AmqpClient.Client.ClientId*
-  name: ClientId
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_ClientId_
-  commentId: Overload:CodersRealm.AmqpClient.Client.ClientId
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.Client.ClientId
-  nameWithType: Client.ClientId
-- uid: CodersRealm.AmqpClient.Client.Consumers
-  name: Consumers
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_Consumers
-  commentId: P:CodersRealm.AmqpClient.Client.Consumers
-  fullName: CodersRealm.AmqpClient.Client.Consumers
-  nameWithType: Client.Consumers
-- uid: CodersRealm.AmqpClient.Client.Consumers*
-  name: Consumers
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_Consumers_
-  commentId: Overload:CodersRealm.AmqpClient.Client.Consumers
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.Client.Consumers
-  nameWithType: Client.Consumers
-- uid: CodersRealm.AmqpClient.Client.DisposeAsync
-  name: DisposeAsync()
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_DisposeAsync
-  commentId: M:CodersRealm.AmqpClient.Client.DisposeAsync
-  fullName: CodersRealm.AmqpClient.Client.DisposeAsync()
-  nameWithType: Client.DisposeAsync()
-- uid: CodersRealm.AmqpClient.Client.DisposeAsync*
-  name: DisposeAsync
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_DisposeAsync_
-  commentId: Overload:CodersRealm.AmqpClient.Client.DisposeAsync
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.Client.DisposeAsync
-  nameWithType: Client.DisposeAsync
-- uid: CodersRealm.AmqpClient.Client.IsConnected
-  name: IsConnected
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_IsConnected
-  commentId: P:CodersRealm.AmqpClient.Client.IsConnected
-  fullName: CodersRealm.AmqpClient.Client.IsConnected
-  nameWithType: Client.IsConnected
-- uid: CodersRealm.AmqpClient.Client.IsConnected*
-  name: IsConnected
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_IsConnected_
-  commentId: Overload:CodersRealm.AmqpClient.Client.IsConnected
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.Client.IsConnected
-  nameWithType: Client.IsConnected
-- uid: CodersRealm.AmqpClient.Client.IsDisposed
-  name: IsDisposed
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_IsDisposed
-  commentId: P:CodersRealm.AmqpClient.Client.IsDisposed
-  fullName: CodersRealm.AmqpClient.Client.IsDisposed
-  nameWithType: Client.IsDisposed
-- uid: CodersRealm.AmqpClient.Client.IsDisposed*
-  name: IsDisposed
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_IsDisposed_
-  commentId: Overload:CodersRealm.AmqpClient.Client.IsDisposed
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.Client.IsDisposed
-  nameWithType: Client.IsDisposed
-- uid: CodersRealm.AmqpClient.Client.IsStarted
-  name: IsStarted
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_IsStarted
-  commentId: P:CodersRealm.AmqpClient.Client.IsStarted
-  fullName: CodersRealm.AmqpClient.Client.IsStarted
-  nameWithType: Client.IsStarted
-- uid: CodersRealm.AmqpClient.Client.IsStarted*
-  name: IsStarted
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_IsStarted_
-  commentId: Overload:CodersRealm.AmqpClient.Client.IsStarted
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.Client.IsStarted
-  nameWithType: Client.IsStarted
-- uid: CodersRealm.AmqpClient.Client.Producers
-  name: Producers
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_Producers
-  commentId: P:CodersRealm.AmqpClient.Client.Producers
-  fullName: CodersRealm.AmqpClient.Client.Producers
-  nameWithType: Client.Producers
-- uid: CodersRealm.AmqpClient.Client.Producers*
-  name: Producers
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_Producers_
-  commentId: Overload:CodersRealm.AmqpClient.Client.Producers
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.Client.Producers
-  nameWithType: Client.Producers
-- uid: CodersRealm.AmqpClient.Client.StartAsync
-  name: StartAsync()
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_StartAsync
-  commentId: M:CodersRealm.AmqpClient.Client.StartAsync
-  fullName: CodersRealm.AmqpClient.Client.StartAsync()
-  nameWithType: Client.StartAsync()
-- uid: CodersRealm.AmqpClient.Client.StartAsync(System.Threading.CancellationToken)
-  name: StartAsync(CancellationToken)
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_StartAsync_System_Threading_CancellationToken_
-  commentId: M:CodersRealm.AmqpClient.Client.StartAsync(System.Threading.CancellationToken)
-  fullName: CodersRealm.AmqpClient.Client.StartAsync(System.Threading.CancellationToken)
-  nameWithType: Client.StartAsync(CancellationToken)
-- uid: CodersRealm.AmqpClient.Client.StartAsync*
-  name: StartAsync
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_StartAsync_
-  commentId: Overload:CodersRealm.AmqpClient.Client.StartAsync
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.Client.StartAsync
-  nameWithType: Client.StartAsync
-- uid: CodersRealm.AmqpClient.Client.Subscribers
-  name: Subscribers
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_Subscribers
-  commentId: P:CodersRealm.AmqpClient.Client.Subscribers
-  fullName: CodersRealm.AmqpClient.Client.Subscribers
-  nameWithType: Client.Subscribers
-- uid: CodersRealm.AmqpClient.Client.Subscribers*
-  name: Subscribers
-  href: api/CodersRealm.AmqpClient.Client.html#CodersRealm_AmqpClient_Client_Subscribers_
-  commentId: Overload:CodersRealm.AmqpClient.Client.Subscribers
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.Client.Subscribers
-  nameWithType: Client.Subscribers
 - uid: CodersRealm.AmqpClient.ClientOptions
   name: ClientOptions
   href: api/CodersRealm.AmqpClient.ClientOptions.html
@@ -922,15 +806,15 @@ references:
   commentId: T:CodersRealm.AmqpClient.ConsumerOptions
   fullName: CodersRealm.AmqpClient.ConsumerOptions
   nameWithType: ConsumerOptions
-- uid: CodersRealm.AmqpClient.ConsumerOptions.#ctor(CodersRealm.AmqpClient.IQueue,System.String,System.String,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)
-  name: ConsumerOptions(IQueue?, string?, string?, bool, AcknowledgementMode, MessageProcessorAsync?, ErrorHandlerAsync?)
-  href: api/CodersRealm.AmqpClient.ConsumerOptions.html#CodersRealm_AmqpClient_ConsumerOptions__ctor_CodersRealm_AmqpClient_IQueue_System_String_System_String_System_Boolean_CodersRealm_AmqpClient_AcknowledgementMode_CodersRealm_AmqpClient_MessageProcessorAsync_CodersRealm_AmqpClient_ErrorHandlerAsync_
-  commentId: M:CodersRealm.AmqpClient.ConsumerOptions.#ctor(CodersRealm.AmqpClient.IQueue,System.String,System.String,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)
-  name.vb: New(IQueue, String, String, Boolean, AcknowledgementMode, MessageProcessorAsync, ErrorHandlerAsync)
-  fullName: CodersRealm.AmqpClient.ConsumerOptions.ConsumerOptions(CodersRealm.AmqpClient.IQueue?, string?, string?, bool, CodersRealm.AmqpClient.AcknowledgementMode, CodersRealm.AmqpClient.MessageProcessorAsync?, CodersRealm.AmqpClient.ErrorHandlerAsync?)
-  fullName.vb: CodersRealm.AmqpClient.ConsumerOptions.New(CodersRealm.AmqpClient.IQueue, String, String, Boolean, CodersRealm.AmqpClient.AcknowledgementMode, CodersRealm.AmqpClient.MessageProcessorAsync, CodersRealm.AmqpClient.ErrorHandlerAsync)
-  nameWithType: ConsumerOptions.ConsumerOptions(IQueue?, string?, string?, bool, AcknowledgementMode, MessageProcessorAsync?, ErrorHandlerAsync?)
-  nameWithType.vb: ConsumerOptions.New(IQueue, String, String, Boolean, AcknowledgementMode, MessageProcessorAsync, ErrorHandlerAsync)
+- uid: CodersRealm.AmqpClient.ConsumerOptions.#ctor(CodersRealm.AmqpClient.IQueue,System.String,System.String,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,System.Boolean,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)
+  name: ConsumerOptions(IQueue?, string?, string?, bool, AcknowledgementMode, bool, MessageProcessorAsync?, ErrorHandlerAsync?)
+  href: api/CodersRealm.AmqpClient.ConsumerOptions.html#CodersRealm_AmqpClient_ConsumerOptions__ctor_CodersRealm_AmqpClient_IQueue_System_String_System_String_System_Boolean_CodersRealm_AmqpClient_AcknowledgementMode_System_Boolean_CodersRealm_AmqpClient_MessageProcessorAsync_CodersRealm_AmqpClient_ErrorHandlerAsync_
+  commentId: M:CodersRealm.AmqpClient.ConsumerOptions.#ctor(CodersRealm.AmqpClient.IQueue,System.String,System.String,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,System.Boolean,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)
+  name.vb: New(IQueue, String, String, Boolean, AcknowledgementMode, Boolean, MessageProcessorAsync, ErrorHandlerAsync)
+  fullName: CodersRealm.AmqpClient.ConsumerOptions.ConsumerOptions(CodersRealm.AmqpClient.IQueue?, string?, string?, bool, CodersRealm.AmqpClient.AcknowledgementMode, bool, CodersRealm.AmqpClient.MessageProcessorAsync?, CodersRealm.AmqpClient.ErrorHandlerAsync?)
+  fullName.vb: CodersRealm.AmqpClient.ConsumerOptions.New(CodersRealm.AmqpClient.IQueue, String, String, Boolean, CodersRealm.AmqpClient.AcknowledgementMode, Boolean, CodersRealm.AmqpClient.MessageProcessorAsync, CodersRealm.AmqpClient.ErrorHandlerAsync)
+  nameWithType: ConsumerOptions.ConsumerOptions(IQueue?, string?, string?, bool, AcknowledgementMode, bool, MessageProcessorAsync?, ErrorHandlerAsync?)
+  nameWithType.vb: ConsumerOptions.New(IQueue, String, String, Boolean, AcknowledgementMode, Boolean, MessageProcessorAsync, ErrorHandlerAsync)
 - uid: CodersRealm.AmqpClient.ConsumerOptions.#ctor*
   name: ConsumerOptions
   href: api/CodersRealm.AmqpClient.ConsumerOptions.html#CodersRealm_AmqpClient_ConsumerOptions__ctor_
@@ -1032,6 +916,19 @@ references:
   isSpec: "True"
   fullName: CodersRealm.AmqpClient.ConsumerOptions.QueueName
   nameWithType: ConsumerOptions.QueueName
+- uid: CodersRealm.AmqpClient.ConsumerOptions.UseConcurrency
+  name: UseConcurrency
+  href: api/CodersRealm.AmqpClient.ConsumerOptions.html#CodersRealm_AmqpClient_ConsumerOptions_UseConcurrency
+  commentId: P:CodersRealm.AmqpClient.ConsumerOptions.UseConcurrency
+  fullName: CodersRealm.AmqpClient.ConsumerOptions.UseConcurrency
+  nameWithType: ConsumerOptions.UseConcurrency
+- uid: CodersRealm.AmqpClient.ConsumerOptions.UseConcurrency*
+  name: UseConcurrency
+  href: api/CodersRealm.AmqpClient.ConsumerOptions.html#CodersRealm_AmqpClient_ConsumerOptions_UseConcurrency_
+  commentId: Overload:CodersRealm.AmqpClient.ConsumerOptions.UseConcurrency
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.ConsumerOptions.UseConcurrency
+  nameWithType: ConsumerOptions.UseConcurrency
 - uid: CodersRealm.AmqpClient.DefaultRedeliveryPolicy
   name: DefaultRedeliveryPolicy
   href: api/CodersRealm.AmqpClient.DefaultRedeliveryPolicy.html
@@ -1119,6 +1016,166 @@ references:
   isSpec: "True"
   fullName: CodersRealm.AmqpClient.IAcknowledgeConsumer.NackAsync
   nameWithType: IAcknowledgeConsumer.NackAsync
+- uid: CodersRealm.AmqpClient.IAmqpClient
+  name: IAmqpClient
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html
+  commentId: T:CodersRealm.AmqpClient.IAmqpClient
+  fullName: CodersRealm.AmqpClient.IAmqpClient
+  nameWithType: IAmqpClient
+- uid: CodersRealm.AmqpClient.IAmqpClient.ClientId
+  name: ClientId
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_ClientId
+  commentId: P:CodersRealm.AmqpClient.IAmqpClient.ClientId
+  fullName: CodersRealm.AmqpClient.IAmqpClient.ClientId
+  nameWithType: IAmqpClient.ClientId
+- uid: CodersRealm.AmqpClient.IAmqpClient.ClientId*
+  name: ClientId
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_ClientId_
+  commentId: Overload:CodersRealm.AmqpClient.IAmqpClient.ClientId
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.IAmqpClient.ClientId
+  nameWithType: IAmqpClient.ClientId
+- uid: CodersRealm.AmqpClient.IAmqpClient.Consumers
+  name: Consumers
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_Consumers
+  commentId: P:CodersRealm.AmqpClient.IAmqpClient.Consumers
+  fullName: CodersRealm.AmqpClient.IAmqpClient.Consumers
+  nameWithType: IAmqpClient.Consumers
+- uid: CodersRealm.AmqpClient.IAmqpClient.Consumers*
+  name: Consumers
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_Consumers_
+  commentId: Overload:CodersRealm.AmqpClient.IAmqpClient.Consumers
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.IAmqpClient.Consumers
+  nameWithType: IAmqpClient.Consumers
+- uid: CodersRealm.AmqpClient.IAmqpClient.DisposeAsync(System.Threading.CancellationToken)
+  name: DisposeAsync(CancellationToken)
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_DisposeAsync_System_Threading_CancellationToken_
+  commentId: M:CodersRealm.AmqpClient.IAmqpClient.DisposeAsync(System.Threading.CancellationToken)
+  fullName: CodersRealm.AmqpClient.IAmqpClient.DisposeAsync(System.Threading.CancellationToken)
+  nameWithType: IAmqpClient.DisposeAsync(CancellationToken)
+- uid: CodersRealm.AmqpClient.IAmqpClient.DisposeAsync*
+  name: DisposeAsync
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_DisposeAsync_
+  commentId: Overload:CodersRealm.AmqpClient.IAmqpClient.DisposeAsync
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.IAmqpClient.DisposeAsync
+  nameWithType: IAmqpClient.DisposeAsync
+- uid: CodersRealm.AmqpClient.IAmqpClient.IsConnected
+  name: IsConnected
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_IsConnected
+  commentId: P:CodersRealm.AmqpClient.IAmqpClient.IsConnected
+  fullName: CodersRealm.AmqpClient.IAmqpClient.IsConnected
+  nameWithType: IAmqpClient.IsConnected
+- uid: CodersRealm.AmqpClient.IAmqpClient.IsConnected*
+  name: IsConnected
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_IsConnected_
+  commentId: Overload:CodersRealm.AmqpClient.IAmqpClient.IsConnected
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.IAmqpClient.IsConnected
+  nameWithType: IAmqpClient.IsConnected
+- uid: CodersRealm.AmqpClient.IAmqpClient.IsDisposed
+  name: IsDisposed
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_IsDisposed
+  commentId: P:CodersRealm.AmqpClient.IAmqpClient.IsDisposed
+  fullName: CodersRealm.AmqpClient.IAmqpClient.IsDisposed
+  nameWithType: IAmqpClient.IsDisposed
+- uid: CodersRealm.AmqpClient.IAmqpClient.IsDisposed*
+  name: IsDisposed
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_IsDisposed_
+  commentId: Overload:CodersRealm.AmqpClient.IAmqpClient.IsDisposed
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.IAmqpClient.IsDisposed
+  nameWithType: IAmqpClient.IsDisposed
+- uid: CodersRealm.AmqpClient.IAmqpClient.IsStarted
+  name: IsStarted
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_IsStarted
+  commentId: P:CodersRealm.AmqpClient.IAmqpClient.IsStarted
+  fullName: CodersRealm.AmqpClient.IAmqpClient.IsStarted
+  nameWithType: IAmqpClient.IsStarted
+- uid: CodersRealm.AmqpClient.IAmqpClient.IsStarted*
+  name: IsStarted
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_IsStarted_
+  commentId: Overload:CodersRealm.AmqpClient.IAmqpClient.IsStarted
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.IAmqpClient.IsStarted
+  nameWithType: IAmqpClient.IsStarted
+- uid: CodersRealm.AmqpClient.IAmqpClient.Producers
+  name: Producers
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_Producers
+  commentId: P:CodersRealm.AmqpClient.IAmqpClient.Producers
+  fullName: CodersRealm.AmqpClient.IAmqpClient.Producers
+  nameWithType: IAmqpClient.Producers
+- uid: CodersRealm.AmqpClient.IAmqpClient.Producers*
+  name: Producers
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_Producers_
+  commentId: Overload:CodersRealm.AmqpClient.IAmqpClient.Producers
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.IAmqpClient.Producers
+  nameWithType: IAmqpClient.Producers
+- uid: CodersRealm.AmqpClient.IAmqpClient.StartAsync
+  name: StartAsync()
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_StartAsync
+  commentId: M:CodersRealm.AmqpClient.IAmqpClient.StartAsync
+  fullName: CodersRealm.AmqpClient.IAmqpClient.StartAsync()
+  nameWithType: IAmqpClient.StartAsync()
+- uid: CodersRealm.AmqpClient.IAmqpClient.StartAsync(System.Threading.CancellationToken)
+  name: StartAsync(CancellationToken)
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_StartAsync_System_Threading_CancellationToken_
+  commentId: M:CodersRealm.AmqpClient.IAmqpClient.StartAsync(System.Threading.CancellationToken)
+  fullName: CodersRealm.AmqpClient.IAmqpClient.StartAsync(System.Threading.CancellationToken)
+  nameWithType: IAmqpClient.StartAsync(CancellationToken)
+- uid: CodersRealm.AmqpClient.IAmqpClient.StartAsync*
+  name: StartAsync
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_StartAsync_
+  commentId: Overload:CodersRealm.AmqpClient.IAmqpClient.StartAsync
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.IAmqpClient.StartAsync
+  nameWithType: IAmqpClient.StartAsync
+- uid: CodersRealm.AmqpClient.IAmqpClient.Subscribers
+  name: Subscribers
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_Subscribers
+  commentId: P:CodersRealm.AmqpClient.IAmqpClient.Subscribers
+  fullName: CodersRealm.AmqpClient.IAmqpClient.Subscribers
+  nameWithType: IAmqpClient.Subscribers
+- uid: CodersRealm.AmqpClient.IAmqpClient.Subscribers*
+  name: Subscribers
+  href: api/CodersRealm.AmqpClient.IAmqpClient.html#CodersRealm_AmqpClient_IAmqpClient_Subscribers_
+  commentId: Overload:CodersRealm.AmqpClient.IAmqpClient.Subscribers
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.IAmqpClient.Subscribers
+  nameWithType: IAmqpClient.Subscribers
+- uid: CodersRealm.AmqpClient.IAmqpClientFactory
+  name: IAmqpClientFactory
+  href: api/CodersRealm.AmqpClient.IAmqpClientFactory.html
+  commentId: T:CodersRealm.AmqpClient.IAmqpClientFactory
+  fullName: CodersRealm.AmqpClient.IAmqpClientFactory
+  nameWithType: IAmqpClientFactory
+- uid: CodersRealm.AmqpClient.IAmqpClientFactory.Create(CodersRealm.AmqpClient.ClientOptions,Microsoft.Extensions.Logging.ILogger)
+  name: Create(ClientOptions, ILogger?)
+  href: api/CodersRealm.AmqpClient.IAmqpClientFactory.html#CodersRealm_AmqpClient_IAmqpClientFactory_Create_CodersRealm_AmqpClient_ClientOptions_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:CodersRealm.AmqpClient.IAmqpClientFactory.Create(CodersRealm.AmqpClient.ClientOptions,Microsoft.Extensions.Logging.ILogger)
+  name.vb: Create(ClientOptions, ILogger)
+  fullName: CodersRealm.AmqpClient.IAmqpClientFactory.Create(CodersRealm.AmqpClient.ClientOptions, Microsoft.Extensions.Logging.ILogger?)
+  fullName.vb: CodersRealm.AmqpClient.IAmqpClientFactory.Create(CodersRealm.AmqpClient.ClientOptions, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IAmqpClientFactory.Create(ClientOptions, ILogger?)
+  nameWithType.vb: IAmqpClientFactory.Create(ClientOptions, ILogger)
+- uid: CodersRealm.AmqpClient.IAmqpClientFactory.Create(System.String,CodersRealm.AmqpClient.IRedeliveryPolicy,Microsoft.Extensions.Logging.ILogger)
+  name: Create(string, IRedeliveryPolicy?, ILogger?)
+  href: api/CodersRealm.AmqpClient.IAmqpClientFactory.html#CodersRealm_AmqpClient_IAmqpClientFactory_Create_System_String_CodersRealm_AmqpClient_IRedeliveryPolicy_Microsoft_Extensions_Logging_ILogger_
+  commentId: M:CodersRealm.AmqpClient.IAmqpClientFactory.Create(System.String,CodersRealm.AmqpClient.IRedeliveryPolicy,Microsoft.Extensions.Logging.ILogger)
+  name.vb: Create(String, IRedeliveryPolicy, ILogger)
+  fullName: CodersRealm.AmqpClient.IAmqpClientFactory.Create(string, CodersRealm.AmqpClient.IRedeliveryPolicy?, Microsoft.Extensions.Logging.ILogger?)
+  fullName.vb: CodersRealm.AmqpClient.IAmqpClientFactory.Create(String, CodersRealm.AmqpClient.IRedeliveryPolicy, Microsoft.Extensions.Logging.ILogger)
+  nameWithType: IAmqpClientFactory.Create(string, IRedeliveryPolicy?, ILogger?)
+  nameWithType.vb: IAmqpClientFactory.Create(String, IRedeliveryPolicy, ILogger)
+- uid: CodersRealm.AmqpClient.IAmqpClientFactory.Create*
+  name: Create
+  href: api/CodersRealm.AmqpClient.IAmqpClientFactory.html#CodersRealm_AmqpClient_IAmqpClientFactory_Create_
+  commentId: Overload:CodersRealm.AmqpClient.IAmqpClientFactory.Create
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.IAmqpClientFactory.Create
+  nameWithType: IAmqpClientFactory.Create
 - uid: CodersRealm.AmqpClient.IBytesMessage
   name: IBytesMessage
   href: api/CodersRealm.AmqpClient.IBytesMessage.html
@@ -1491,122 +1548,6 @@ references:
   isSpec: "True"
   fullName: CodersRealm.AmqpClient.IBytesMessage.WriteString
   nameWithType: IBytesMessage.WriteString
-- uid: CodersRealm.AmqpClient.IClient
-  name: IClient
-  href: api/CodersRealm.AmqpClient.IClient.html
-  commentId: T:CodersRealm.AmqpClient.IClient
-  fullName: CodersRealm.AmqpClient.IClient
-  nameWithType: IClient
-- uid: CodersRealm.AmqpClient.IClient.ClientId
-  name: ClientId
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_ClientId
-  commentId: P:CodersRealm.AmqpClient.IClient.ClientId
-  fullName: CodersRealm.AmqpClient.IClient.ClientId
-  nameWithType: IClient.ClientId
-- uid: CodersRealm.AmqpClient.IClient.ClientId*
-  name: ClientId
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_ClientId_
-  commentId: Overload:CodersRealm.AmqpClient.IClient.ClientId
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.IClient.ClientId
-  nameWithType: IClient.ClientId
-- uid: CodersRealm.AmqpClient.IClient.Consumers
-  name: Consumers
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_Consumers
-  commentId: P:CodersRealm.AmqpClient.IClient.Consumers
-  fullName: CodersRealm.AmqpClient.IClient.Consumers
-  nameWithType: IClient.Consumers
-- uid: CodersRealm.AmqpClient.IClient.Consumers*
-  name: Consumers
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_Consumers_
-  commentId: Overload:CodersRealm.AmqpClient.IClient.Consumers
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.IClient.Consumers
-  nameWithType: IClient.Consumers
-- uid: CodersRealm.AmqpClient.IClient.IsConnected
-  name: IsConnected
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_IsConnected
-  commentId: P:CodersRealm.AmqpClient.IClient.IsConnected
-  fullName: CodersRealm.AmqpClient.IClient.IsConnected
-  nameWithType: IClient.IsConnected
-- uid: CodersRealm.AmqpClient.IClient.IsConnected*
-  name: IsConnected
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_IsConnected_
-  commentId: Overload:CodersRealm.AmqpClient.IClient.IsConnected
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.IClient.IsConnected
-  nameWithType: IClient.IsConnected
-- uid: CodersRealm.AmqpClient.IClient.IsDisposed
-  name: IsDisposed
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_IsDisposed
-  commentId: P:CodersRealm.AmqpClient.IClient.IsDisposed
-  fullName: CodersRealm.AmqpClient.IClient.IsDisposed
-  nameWithType: IClient.IsDisposed
-- uid: CodersRealm.AmqpClient.IClient.IsDisposed*
-  name: IsDisposed
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_IsDisposed_
-  commentId: Overload:CodersRealm.AmqpClient.IClient.IsDisposed
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.IClient.IsDisposed
-  nameWithType: IClient.IsDisposed
-- uid: CodersRealm.AmqpClient.IClient.IsStarted
-  name: IsStarted
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_IsStarted
-  commentId: P:CodersRealm.AmqpClient.IClient.IsStarted
-  fullName: CodersRealm.AmqpClient.IClient.IsStarted
-  nameWithType: IClient.IsStarted
-- uid: CodersRealm.AmqpClient.IClient.IsStarted*
-  name: IsStarted
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_IsStarted_
-  commentId: Overload:CodersRealm.AmqpClient.IClient.IsStarted
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.IClient.IsStarted
-  nameWithType: IClient.IsStarted
-- uid: CodersRealm.AmqpClient.IClient.Producers
-  name: Producers
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_Producers
-  commentId: P:CodersRealm.AmqpClient.IClient.Producers
-  fullName: CodersRealm.AmqpClient.IClient.Producers
-  nameWithType: IClient.Producers
-- uid: CodersRealm.AmqpClient.IClient.Producers*
-  name: Producers
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_Producers_
-  commentId: Overload:CodersRealm.AmqpClient.IClient.Producers
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.IClient.Producers
-  nameWithType: IClient.Producers
-- uid: CodersRealm.AmqpClient.IClient.StartAsync
-  name: StartAsync()
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_StartAsync
-  commentId: M:CodersRealm.AmqpClient.IClient.StartAsync
-  fullName: CodersRealm.AmqpClient.IClient.StartAsync()
-  nameWithType: IClient.StartAsync()
-- uid: CodersRealm.AmqpClient.IClient.StartAsync(System.Threading.CancellationToken)
-  name: StartAsync(CancellationToken)
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_StartAsync_System_Threading_CancellationToken_
-  commentId: M:CodersRealm.AmqpClient.IClient.StartAsync(System.Threading.CancellationToken)
-  fullName: CodersRealm.AmqpClient.IClient.StartAsync(System.Threading.CancellationToken)
-  nameWithType: IClient.StartAsync(CancellationToken)
-- uid: CodersRealm.AmqpClient.IClient.StartAsync*
-  name: StartAsync
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_StartAsync_
-  commentId: Overload:CodersRealm.AmqpClient.IClient.StartAsync
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.IClient.StartAsync
-  nameWithType: IClient.StartAsync
-- uid: CodersRealm.AmqpClient.IClient.Subscribers
-  name: Subscribers
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_Subscribers
-  commentId: P:CodersRealm.AmqpClient.IClient.Subscribers
-  fullName: CodersRealm.AmqpClient.IClient.Subscribers
-  nameWithType: IClient.Subscribers
-- uid: CodersRealm.AmqpClient.IClient.Subscribers*
-  name: Subscribers
-  href: api/CodersRealm.AmqpClient.IClient.html#CodersRealm_AmqpClient_IClient_Subscribers_
-  commentId: Overload:CodersRealm.AmqpClient.IClient.Subscribers
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.IClient.Subscribers
-  nameWithType: IClient.Subscribers
 - uid: CodersRealm.AmqpClient.IConsumer
   name: IConsumer
   href: api/CodersRealm.AmqpClient.IConsumer.html
@@ -1677,12 +1618,12 @@ references:
   commentId: M:CodersRealm.AmqpClient.IConsumerManager.CreateAsync(CodersRealm.AmqpClient.ConsumerOptions)
   fullName: CodersRealm.AmqpClient.IConsumerManager.CreateAsync(CodersRealm.AmqpClient.ConsumerOptions)
   nameWithType: IConsumerManager.CreateAsync(ConsumerOptions)
-- uid: CodersRealm.AmqpClient.IConsumerManager.CreateAsync(CodersRealm.AmqpClient.ConsumerOptions,CodersRealm.AmqpClient.ResponderOptions)
-  name: CreateAsync(ConsumerOptions, ResponderOptions)
-  href: api/CodersRealm.AmqpClient.IConsumerManager.html#CodersRealm_AmqpClient_IConsumerManager_CreateAsync_CodersRealm_AmqpClient_ConsumerOptions_CodersRealm_AmqpClient_ResponderOptions_
-  commentId: M:CodersRealm.AmqpClient.IConsumerManager.CreateAsync(CodersRealm.AmqpClient.ConsumerOptions,CodersRealm.AmqpClient.ResponderOptions)
-  fullName: CodersRealm.AmqpClient.IConsumerManager.CreateAsync(CodersRealm.AmqpClient.ConsumerOptions, CodersRealm.AmqpClient.ResponderOptions)
-  nameWithType: IConsumerManager.CreateAsync(ConsumerOptions, ResponderOptions)
+- uid: CodersRealm.AmqpClient.IConsumerManager.CreateAsync(CodersRealm.AmqpClient.ConsumerOptions,CodersRealm.AmqpClient.ReplierOptions)
+  name: CreateAsync(ConsumerOptions, ReplierOptions)
+  href: api/CodersRealm.AmqpClient.IConsumerManager.html#CodersRealm_AmqpClient_IConsumerManager_CreateAsync_CodersRealm_AmqpClient_ConsumerOptions_CodersRealm_AmqpClient_ReplierOptions_
+  commentId: M:CodersRealm.AmqpClient.IConsumerManager.CreateAsync(CodersRealm.AmqpClient.ConsumerOptions,CodersRealm.AmqpClient.ReplierOptions)
+  fullName: CodersRealm.AmqpClient.IConsumerManager.CreateAsync(CodersRealm.AmqpClient.ConsumerOptions, CodersRealm.AmqpClient.ReplierOptions)
+  nameWithType: IConsumerManager.CreateAsync(ConsumerOptions, ReplierOptions)
 - uid: CodersRealm.AmqpClient.IConsumerManager.CreateAsync*
   name: CreateAsync
   href: api/CodersRealm.AmqpClient.IConsumerManager.html#CodersRealm_AmqpClient_IConsumerManager_CreateAsync_
@@ -3395,12 +3336,12 @@ references:
   commentId: M:CodersRealm.AmqpClient.ISubscriberManager.CreateAsync(CodersRealm.AmqpClient.SubscriberOptions)
   fullName: CodersRealm.AmqpClient.ISubscriberManager.CreateAsync(CodersRealm.AmqpClient.SubscriberOptions)
   nameWithType: ISubscriberManager.CreateAsync(SubscriberOptions)
-- uid: CodersRealm.AmqpClient.ISubscriberManager.CreateAsync(CodersRealm.AmqpClient.SubscriberOptions,CodersRealm.AmqpClient.ResponderOptions)
-  name: CreateAsync(SubscriberOptions, ResponderOptions)
-  href: api/CodersRealm.AmqpClient.ISubscriberManager.html#CodersRealm_AmqpClient_ISubscriberManager_CreateAsync_CodersRealm_AmqpClient_SubscriberOptions_CodersRealm_AmqpClient_ResponderOptions_
-  commentId: M:CodersRealm.AmqpClient.ISubscriberManager.CreateAsync(CodersRealm.AmqpClient.SubscriberOptions,CodersRealm.AmqpClient.ResponderOptions)
-  fullName: CodersRealm.AmqpClient.ISubscriberManager.CreateAsync(CodersRealm.AmqpClient.SubscriberOptions, CodersRealm.AmqpClient.ResponderOptions)
-  nameWithType: ISubscriberManager.CreateAsync(SubscriberOptions, ResponderOptions)
+- uid: CodersRealm.AmqpClient.ISubscriberManager.CreateAsync(CodersRealm.AmqpClient.SubscriberOptions,CodersRealm.AmqpClient.ReplierOptions)
+  name: CreateAsync(SubscriberOptions, ReplierOptions)
+  href: api/CodersRealm.AmqpClient.ISubscriberManager.html#CodersRealm_AmqpClient_ISubscriberManager_CreateAsync_CodersRealm_AmqpClient_SubscriberOptions_CodersRealm_AmqpClient_ReplierOptions_
+  commentId: M:CodersRealm.AmqpClient.ISubscriberManager.CreateAsync(CodersRealm.AmqpClient.SubscriberOptions,CodersRealm.AmqpClient.ReplierOptions)
+  fullName: CodersRealm.AmqpClient.ISubscriberManager.CreateAsync(CodersRealm.AmqpClient.SubscriberOptions, CodersRealm.AmqpClient.ReplierOptions)
+  nameWithType: ISubscriberManager.CreateAsync(SubscriberOptions, ReplierOptions)
 - uid: CodersRealm.AmqpClient.ISubscriberManager.CreateAsync*
   name: CreateAsync
   href: api/CodersRealm.AmqpClient.ISubscriberManager.html#CodersRealm_AmqpClient_ISubscriberManager_CreateAsync_
@@ -4098,70 +4039,83 @@ references:
   commentId: T:CodersRealm.AmqpClient.MessageProcessorAsync
   fullName: CodersRealm.AmqpClient.MessageProcessorAsync
   nameWithType: MessageProcessorAsync
-- uid: CodersRealm.AmqpClient.MessageQueueEventArgs
-  name: MessageQueueEventArgs
-  href: api/CodersRealm.AmqpClient.MessageQueueEventArgs.html
-  commentId: T:CodersRealm.AmqpClient.MessageQueueEventArgs
-  fullName: CodersRealm.AmqpClient.MessageQueueEventArgs
-  nameWithType: MessageQueueEventArgs
-- uid: CodersRealm.AmqpClient.MessageQueueEventArgs.#ctor(CodersRealm.AmqpClient.IMessage,CodersRealm.AmqpClient.MessageAction)
-  name: MessageQueueEventArgs(IMessage, MessageAction)
-  href: api/CodersRealm.AmqpClient.MessageQueueEventArgs.html#CodersRealm_AmqpClient_MessageQueueEventArgs__ctor_CodersRealm_AmqpClient_IMessage_CodersRealm_AmqpClient_MessageAction_
-  commentId: M:CodersRealm.AmqpClient.MessageQueueEventArgs.#ctor(CodersRealm.AmqpClient.IMessage,CodersRealm.AmqpClient.MessageAction)
+- uid: CodersRealm.AmqpClient.MessageReceivedContext
+  name: MessageReceivedContext
+  href: api/CodersRealm.AmqpClient.MessageReceivedContext.html
+  commentId: T:CodersRealm.AmqpClient.MessageReceivedContext
+  fullName: CodersRealm.AmqpClient.MessageReceivedContext
+  nameWithType: MessageReceivedContext
+- uid: CodersRealm.AmqpClient.MessageReceivedContext.#ctor(CodersRealm.AmqpClient.IMessage,CodersRealm.AmqpClient.MessageAction)
+  name: MessageReceivedContext(IMessage, MessageAction)
+  href: api/CodersRealm.AmqpClient.MessageReceivedContext.html#CodersRealm_AmqpClient_MessageReceivedContext__ctor_CodersRealm_AmqpClient_IMessage_CodersRealm_AmqpClient_MessageAction_
+  commentId: M:CodersRealm.AmqpClient.MessageReceivedContext.#ctor(CodersRealm.AmqpClient.IMessage,CodersRealm.AmqpClient.MessageAction)
   name.vb: New(IMessage, MessageAction)
-  fullName: CodersRealm.AmqpClient.MessageQueueEventArgs.MessageQueueEventArgs(CodersRealm.AmqpClient.IMessage, CodersRealm.AmqpClient.MessageAction)
-  fullName.vb: CodersRealm.AmqpClient.MessageQueueEventArgs.New(CodersRealm.AmqpClient.IMessage, CodersRealm.AmqpClient.MessageAction)
-  nameWithType: MessageQueueEventArgs.MessageQueueEventArgs(IMessage, MessageAction)
-  nameWithType.vb: MessageQueueEventArgs.New(IMessage, MessageAction)
-- uid: CodersRealm.AmqpClient.MessageQueueEventArgs.#ctor*
-  name: MessageQueueEventArgs
-  href: api/CodersRealm.AmqpClient.MessageQueueEventArgs.html#CodersRealm_AmqpClient_MessageQueueEventArgs__ctor_
-  commentId: Overload:CodersRealm.AmqpClient.MessageQueueEventArgs.#ctor
+  fullName: CodersRealm.AmqpClient.MessageReceivedContext.MessageReceivedContext(CodersRealm.AmqpClient.IMessage, CodersRealm.AmqpClient.MessageAction)
+  fullName.vb: CodersRealm.AmqpClient.MessageReceivedContext.New(CodersRealm.AmqpClient.IMessage, CodersRealm.AmqpClient.MessageAction)
+  nameWithType: MessageReceivedContext.MessageReceivedContext(IMessage, MessageAction)
+  nameWithType.vb: MessageReceivedContext.New(IMessage, MessageAction)
+- uid: CodersRealm.AmqpClient.MessageReceivedContext.#ctor*
+  name: MessageReceivedContext
+  href: api/CodersRealm.AmqpClient.MessageReceivedContext.html#CodersRealm_AmqpClient_MessageReceivedContext__ctor_
+  commentId: Overload:CodersRealm.AmqpClient.MessageReceivedContext.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: CodersRealm.AmqpClient.MessageQueueEventArgs.MessageQueueEventArgs
-  fullName.vb: CodersRealm.AmqpClient.MessageQueueEventArgs.New
-  nameWithType: MessageQueueEventArgs.MessageQueueEventArgs
-  nameWithType.vb: MessageQueueEventArgs.New
-- uid: CodersRealm.AmqpClient.MessageQueueEventArgs.Action
+  fullName: CodersRealm.AmqpClient.MessageReceivedContext.MessageReceivedContext
+  fullName.vb: CodersRealm.AmqpClient.MessageReceivedContext.New
+  nameWithType: MessageReceivedContext.MessageReceivedContext
+  nameWithType.vb: MessageReceivedContext.New
+- uid: CodersRealm.AmqpClient.MessageReceivedContext.Action
   name: Action
-  href: api/CodersRealm.AmqpClient.MessageQueueEventArgs.html#CodersRealm_AmqpClient_MessageQueueEventArgs_Action
-  commentId: P:CodersRealm.AmqpClient.MessageQueueEventArgs.Action
-  fullName: CodersRealm.AmqpClient.MessageQueueEventArgs.Action
-  nameWithType: MessageQueueEventArgs.Action
-- uid: CodersRealm.AmqpClient.MessageQueueEventArgs.Action*
+  href: api/CodersRealm.AmqpClient.MessageReceivedContext.html#CodersRealm_AmqpClient_MessageReceivedContext_Action
+  commentId: P:CodersRealm.AmqpClient.MessageReceivedContext.Action
+  fullName: CodersRealm.AmqpClient.MessageReceivedContext.Action
+  nameWithType: MessageReceivedContext.Action
+- uid: CodersRealm.AmqpClient.MessageReceivedContext.Action*
   name: Action
-  href: api/CodersRealm.AmqpClient.MessageQueueEventArgs.html#CodersRealm_AmqpClient_MessageQueueEventArgs_Action_
-  commentId: Overload:CodersRealm.AmqpClient.MessageQueueEventArgs.Action
+  href: api/CodersRealm.AmqpClient.MessageReceivedContext.html#CodersRealm_AmqpClient_MessageReceivedContext_Action_
+  commentId: Overload:CodersRealm.AmqpClient.MessageReceivedContext.Action
   isSpec: "True"
-  fullName: CodersRealm.AmqpClient.MessageQueueEventArgs.Action
-  nameWithType: MessageQueueEventArgs.Action
-- uid: CodersRealm.AmqpClient.MessageQueueEventArgs.Message
+  fullName: CodersRealm.AmqpClient.MessageReceivedContext.Action
+  nameWithType: MessageReceivedContext.Action
+- uid: CodersRealm.AmqpClient.MessageReceivedContext.Message
   name: Message
-  href: api/CodersRealm.AmqpClient.MessageQueueEventArgs.html#CodersRealm_AmqpClient_MessageQueueEventArgs_Message
-  commentId: P:CodersRealm.AmqpClient.MessageQueueEventArgs.Message
-  fullName: CodersRealm.AmqpClient.MessageQueueEventArgs.Message
-  nameWithType: MessageQueueEventArgs.Message
-- uid: CodersRealm.AmqpClient.MessageQueueEventArgs.Message*
+  href: api/CodersRealm.AmqpClient.MessageReceivedContext.html#CodersRealm_AmqpClient_MessageReceivedContext_Message
+  commentId: P:CodersRealm.AmqpClient.MessageReceivedContext.Message
+  fullName: CodersRealm.AmqpClient.MessageReceivedContext.Message
+  nameWithType: MessageReceivedContext.Message
+- uid: CodersRealm.AmqpClient.MessageReceivedContext.Message*
   name: Message
-  href: api/CodersRealm.AmqpClient.MessageQueueEventArgs.html#CodersRealm_AmqpClient_MessageQueueEventArgs_Message_
-  commentId: Overload:CodersRealm.AmqpClient.MessageQueueEventArgs.Message
+  href: api/CodersRealm.AmqpClient.MessageReceivedContext.html#CodersRealm_AmqpClient_MessageReceivedContext_Message_
+  commentId: Overload:CodersRealm.AmqpClient.MessageReceivedContext.Message
   isSpec: "True"
-  fullName: CodersRealm.AmqpClient.MessageQueueEventArgs.Message
-  nameWithType: MessageQueueEventArgs.Message
-- uid: CodersRealm.AmqpClient.MessageQueueEventArgs.ResponseMessage
-  name: ResponseMessage
-  href: api/CodersRealm.AmqpClient.MessageQueueEventArgs.html#CodersRealm_AmqpClient_MessageQueueEventArgs_ResponseMessage
-  commentId: P:CodersRealm.AmqpClient.MessageQueueEventArgs.ResponseMessage
-  fullName: CodersRealm.AmqpClient.MessageQueueEventArgs.ResponseMessage
-  nameWithType: MessageQueueEventArgs.ResponseMessage
-- uid: CodersRealm.AmqpClient.MessageQueueEventArgs.ResponseMessage*
-  name: ResponseMessage
-  href: api/CodersRealm.AmqpClient.MessageQueueEventArgs.html#CodersRealm_AmqpClient_MessageQueueEventArgs_ResponseMessage_
-  commentId: Overload:CodersRealm.AmqpClient.MessageQueueEventArgs.ResponseMessage
+  fullName: CodersRealm.AmqpClient.MessageReceivedContext.Message
+  nameWithType: MessageReceivedContext.Message
+- uid: CodersRealm.AmqpClient.MessageReceivedContext.ReplyMessage
+  name: ReplyMessage
+  href: api/CodersRealm.AmqpClient.MessageReceivedContext.html#CodersRealm_AmqpClient_MessageReceivedContext_ReplyMessage
+  commentId: P:CodersRealm.AmqpClient.MessageReceivedContext.ReplyMessage
+  fullName: CodersRealm.AmqpClient.MessageReceivedContext.ReplyMessage
+  nameWithType: MessageReceivedContext.ReplyMessage
+- uid: CodersRealm.AmqpClient.MessageReceivedContext.ReplyMessage*
+  name: ReplyMessage
+  href: api/CodersRealm.AmqpClient.MessageReceivedContext.html#CodersRealm_AmqpClient_MessageReceivedContext_ReplyMessage_
+  commentId: Overload:CodersRealm.AmqpClient.MessageReceivedContext.ReplyMessage
   isSpec: "True"
-  fullName: CodersRealm.AmqpClient.MessageQueueEventArgs.ResponseMessage
-  nameWithType: MessageQueueEventArgs.ResponseMessage
+  fullName: CodersRealm.AmqpClient.MessageReceivedContext.ReplyMessage
+  nameWithType: MessageReceivedContext.ReplyMessage
+- uid: CodersRealm.AmqpClient.MessageReceivedContext.Tag
+  name: Tag
+  href: api/CodersRealm.AmqpClient.MessageReceivedContext.html#CodersRealm_AmqpClient_MessageReceivedContext_Tag
+  commentId: P:CodersRealm.AmqpClient.MessageReceivedContext.Tag
+  fullName: CodersRealm.AmqpClient.MessageReceivedContext.Tag
+  nameWithType: MessageReceivedContext.Tag
+- uid: CodersRealm.AmqpClient.MessageReceivedContext.Tag*
+  name: Tag
+  href: api/CodersRealm.AmqpClient.MessageReceivedContext.html#CodersRealm_AmqpClient_MessageReceivedContext_Tag_
+  commentId: Overload:CodersRealm.AmqpClient.MessageReceivedContext.Tag
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.MessageReceivedContext.Tag
+  nameWithType: MessageReceivedContext.Tag
 - uid: CodersRealm.AmqpClient.MessageTransformerAsync
   name: MessageTransformerAsync
   href: api/CodersRealm.AmqpClient.MessageTransformerAsync.html
@@ -4546,6 +4500,88 @@ references:
   isSpec: "True"
   fullName: CodersRealm.AmqpClient.RedeliveryPolicy.UseExponentialBackOff
   nameWithType: RedeliveryPolicy.UseExponentialBackOff
+- uid: CodersRealm.AmqpClient.ReplierOptions
+  name: ReplierOptions
+  href: api/CodersRealm.AmqpClient.ReplierOptions.html
+  commentId: T:CodersRealm.AmqpClient.ReplierOptions
+  fullName: CodersRealm.AmqpClient.ReplierOptions
+  nameWithType: ReplierOptions
+- uid: CodersRealm.AmqpClient.ReplierOptions.#ctor(CodersRealm.AmqpClient.IDestination,System.String,System.Nullable{CodersRealm.AmqpClient.ReplyDestinationType})
+  name: ReplierOptions(IDestination?, string?, ReplyDestinationType?)
+  href: api/CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions__ctor_CodersRealm_AmqpClient_IDestination_System_String_System_Nullable_CodersRealm_AmqpClient_ReplyDestinationType__
+  commentId: M:CodersRealm.AmqpClient.ReplierOptions.#ctor(CodersRealm.AmqpClient.IDestination,System.String,System.Nullable{CodersRealm.AmqpClient.ReplyDestinationType})
+  name.vb: New(IDestination, String, ReplyDestinationType?)
+  fullName: CodersRealm.AmqpClient.ReplierOptions.ReplierOptions(CodersRealm.AmqpClient.IDestination?, string?, CodersRealm.AmqpClient.ReplyDestinationType?)
+  fullName.vb: CodersRealm.AmqpClient.ReplierOptions.New(CodersRealm.AmqpClient.IDestination, String, CodersRealm.AmqpClient.ReplyDestinationType?)
+  nameWithType: ReplierOptions.ReplierOptions(IDestination?, string?, ReplyDestinationType?)
+  nameWithType.vb: ReplierOptions.New(IDestination, String, ReplyDestinationType?)
+- uid: CodersRealm.AmqpClient.ReplierOptions.#ctor*
+  name: ReplierOptions
+  href: api/CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions__ctor_
+  commentId: Overload:CodersRealm.AmqpClient.ReplierOptions.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CodersRealm.AmqpClient.ReplierOptions.ReplierOptions
+  fullName.vb: CodersRealm.AmqpClient.ReplierOptions.New
+  nameWithType: ReplierOptions.ReplierOptions
+  nameWithType.vb: ReplierOptions.New
+- uid: CodersRealm.AmqpClient.ReplierOptions.ReplierDestination
+  name: ReplierDestination
+  href: api/CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestination
+  commentId: P:CodersRealm.AmqpClient.ReplierOptions.ReplierDestination
+  fullName: CodersRealm.AmqpClient.ReplierOptions.ReplierDestination
+  nameWithType: ReplierOptions.ReplierDestination
+- uid: CodersRealm.AmqpClient.ReplierOptions.ReplierDestination*
+  name: ReplierDestination
+  href: api/CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestination_
+  commentId: Overload:CodersRealm.AmqpClient.ReplierOptions.ReplierDestination
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.ReplierOptions.ReplierDestination
+  nameWithType: ReplierOptions.ReplierDestination
+- uid: CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationName
+  name: ReplierDestinationName
+  href: api/CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationName
+  commentId: P:CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationName
+  fullName: CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationName
+  nameWithType: ReplierOptions.ReplierDestinationName
+- uid: CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationName*
+  name: ReplierDestinationName
+  href: api/CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationName_
+  commentId: Overload:CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationName
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationName
+  nameWithType: ReplierOptions.ReplierDestinationName
+- uid: CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationType
+  name: ReplierDestinationType
+  href: api/CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationType
+  commentId: P:CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationType
+  fullName: CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationType
+  nameWithType: ReplierOptions.ReplierDestinationType
+- uid: CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationType*
+  name: ReplierDestinationType
+  href: api/CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationType_
+  commentId: Overload:CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationType
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationType
+  nameWithType: ReplierOptions.ReplierDestinationType
+- uid: CodersRealm.AmqpClient.ReplyDestinationType
+  name: ReplyDestinationType
+  href: api/CodersRealm.AmqpClient.ReplyDestinationType.html
+  commentId: T:CodersRealm.AmqpClient.ReplyDestinationType
+  fullName: CodersRealm.AmqpClient.ReplyDestinationType
+  nameWithType: ReplyDestinationType
+- uid: CodersRealm.AmqpClient.ReplyDestinationType.Queue
+  name: Queue
+  href: api/CodersRealm.AmqpClient.ReplyDestinationType.html#CodersRealm_AmqpClient_ReplyDestinationType_Queue
+  commentId: F:CodersRealm.AmqpClient.ReplyDestinationType.Queue
+  fullName: CodersRealm.AmqpClient.ReplyDestinationType.Queue
+  nameWithType: ReplyDestinationType.Queue
+- uid: CodersRealm.AmqpClient.ReplyDestinationType.Topic
+  name: Topic
+  href: api/CodersRealm.AmqpClient.ReplyDestinationType.html#CodersRealm_AmqpClient_ReplyDestinationType_Topic
+  commentId: F:CodersRealm.AmqpClient.ReplyDestinationType.Topic
+  fullName: CodersRealm.AmqpClient.ReplyDestinationType.Topic
+  nameWithType: ReplyDestinationType.Topic
 - uid: CodersRealm.AmqpClient.ResourceAllocationException
   name: ResourceAllocationException
   href: api/CodersRealm.AmqpClient.ResourceAllocationException.html
@@ -4607,113 +4643,31 @@ references:
   fullName.vb: CodersRealm.AmqpClient.ResourceAllocationException.New
   nameWithType: ResourceAllocationException.ResourceAllocationException
   nameWithType.vb: ResourceAllocationException.New
-- uid: CodersRealm.AmqpClient.ResponderOptions
-  name: ResponderOptions
-  href: api/CodersRealm.AmqpClient.ResponderOptions.html
-  commentId: T:CodersRealm.AmqpClient.ResponderOptions
-  fullName: CodersRealm.AmqpClient.ResponderOptions
-  nameWithType: ResponderOptions
-- uid: CodersRealm.AmqpClient.ResponderOptions.#ctor(CodersRealm.AmqpClient.IDestination,System.String,System.Nullable{CodersRealm.AmqpClient.ResponseDestinationType})
-  name: ResponderOptions(IDestination?, string?, ResponseDestinationType?)
-  href: api/CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions__ctor_CodersRealm_AmqpClient_IDestination_System_String_System_Nullable_CodersRealm_AmqpClient_ResponseDestinationType__
-  commentId: M:CodersRealm.AmqpClient.ResponderOptions.#ctor(CodersRealm.AmqpClient.IDestination,System.String,System.Nullable{CodersRealm.AmqpClient.ResponseDestinationType})
-  name.vb: New(IDestination, String, ResponseDestinationType?)
-  fullName: CodersRealm.AmqpClient.ResponderOptions.ResponderOptions(CodersRealm.AmqpClient.IDestination?, string?, CodersRealm.AmqpClient.ResponseDestinationType?)
-  fullName.vb: CodersRealm.AmqpClient.ResponderOptions.New(CodersRealm.AmqpClient.IDestination, String, CodersRealm.AmqpClient.ResponseDestinationType?)
-  nameWithType: ResponderOptions.ResponderOptions(IDestination?, string?, ResponseDestinationType?)
-  nameWithType.vb: ResponderOptions.New(IDestination, String, ResponseDestinationType?)
-- uid: CodersRealm.AmqpClient.ResponderOptions.#ctor*
-  name: ResponderOptions
-  href: api/CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions__ctor_
-  commentId: Overload:CodersRealm.AmqpClient.ResponderOptions.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: CodersRealm.AmqpClient.ResponderOptions.ResponderOptions
-  fullName.vb: CodersRealm.AmqpClient.ResponderOptions.New
-  nameWithType: ResponderOptions.ResponderOptions
-  nameWithType.vb: ResponderOptions.New
-- uid: CodersRealm.AmqpClient.ResponderOptions.ResponseDestination
-  name: ResponseDestination
-  href: api/CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestination
-  commentId: P:CodersRealm.AmqpClient.ResponderOptions.ResponseDestination
-  fullName: CodersRealm.AmqpClient.ResponderOptions.ResponseDestination
-  nameWithType: ResponderOptions.ResponseDestination
-- uid: CodersRealm.AmqpClient.ResponderOptions.ResponseDestination*
-  name: ResponseDestination
-  href: api/CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestination_
-  commentId: Overload:CodersRealm.AmqpClient.ResponderOptions.ResponseDestination
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.ResponderOptions.ResponseDestination
-  nameWithType: ResponderOptions.ResponseDestination
-- uid: CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationName
-  name: ResponseDestinationName
-  href: api/CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationName
-  commentId: P:CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationName
-  fullName: CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationName
-  nameWithType: ResponderOptions.ResponseDestinationName
-- uid: CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationName*
-  name: ResponseDestinationName
-  href: api/CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationName_
-  commentId: Overload:CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationName
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationName
-  nameWithType: ResponderOptions.ResponseDestinationName
-- uid: CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationType
-  name: ResponseDestinationType
-  href: api/CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationType
-  commentId: P:CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationType
-  fullName: CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationType
-  nameWithType: ResponderOptions.ResponseDestinationType
-- uid: CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationType*
-  name: ResponseDestinationType
-  href: api/CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationType_
-  commentId: Overload:CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationType
-  isSpec: "True"
-  fullName: CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationType
-  nameWithType: ResponderOptions.ResponseDestinationType
-- uid: CodersRealm.AmqpClient.ResponseDestinationType
-  name: ResponseDestinationType
-  href: api/CodersRealm.AmqpClient.ResponseDestinationType.html
-  commentId: T:CodersRealm.AmqpClient.ResponseDestinationType
-  fullName: CodersRealm.AmqpClient.ResponseDestinationType
-  nameWithType: ResponseDestinationType
-- uid: CodersRealm.AmqpClient.ResponseDestinationType.Queue
-  name: Queue
-  href: api/CodersRealm.AmqpClient.ResponseDestinationType.html#CodersRealm_AmqpClient_ResponseDestinationType_Queue
-  commentId: F:CodersRealm.AmqpClient.ResponseDestinationType.Queue
-  fullName: CodersRealm.AmqpClient.ResponseDestinationType.Queue
-  nameWithType: ResponseDestinationType.Queue
-- uid: CodersRealm.AmqpClient.ResponseDestinationType.Topic
-  name: Topic
-  href: api/CodersRealm.AmqpClient.ResponseDestinationType.html#CodersRealm_AmqpClient_ResponseDestinationType_Topic
-  commentId: F:CodersRealm.AmqpClient.ResponseDestinationType.Topic
-  fullName: CodersRealm.AmqpClient.ResponseDestinationType.Topic
-  nameWithType: ResponseDestinationType.Topic
-- uid: CodersRealm.AmqpClient.SendResponseException
-  name: SendResponseException
-  href: api/CodersRealm.AmqpClient.SendResponseException.html
-  commentId: T:CodersRealm.AmqpClient.SendResponseException
-  fullName: CodersRealm.AmqpClient.SendResponseException
-  nameWithType: SendResponseException
-- uid: CodersRealm.AmqpClient.SendResponseException.#ctor(System.Exception)
-  name: SendResponseException(Exception)
-  href: api/CodersRealm.AmqpClient.SendResponseException.html#CodersRealm_AmqpClient_SendResponseException__ctor_System_Exception_
-  commentId: M:CodersRealm.AmqpClient.SendResponseException.#ctor(System.Exception)
+- uid: CodersRealm.AmqpClient.SendReplyException
+  name: SendReplyException
+  href: api/CodersRealm.AmqpClient.SendReplyException.html
+  commentId: T:CodersRealm.AmqpClient.SendReplyException
+  fullName: CodersRealm.AmqpClient.SendReplyException
+  nameWithType: SendReplyException
+- uid: CodersRealm.AmqpClient.SendReplyException.#ctor(System.Exception)
+  name: SendReplyException(Exception)
+  href: api/CodersRealm.AmqpClient.SendReplyException.html#CodersRealm_AmqpClient_SendReplyException__ctor_System_Exception_
+  commentId: M:CodersRealm.AmqpClient.SendReplyException.#ctor(System.Exception)
   name.vb: New(Exception)
-  fullName: CodersRealm.AmqpClient.SendResponseException.SendResponseException(System.Exception)
-  fullName.vb: CodersRealm.AmqpClient.SendResponseException.New(System.Exception)
-  nameWithType: SendResponseException.SendResponseException(Exception)
-  nameWithType.vb: SendResponseException.New(Exception)
-- uid: CodersRealm.AmqpClient.SendResponseException.#ctor*
-  name: SendResponseException
-  href: api/CodersRealm.AmqpClient.SendResponseException.html#CodersRealm_AmqpClient_SendResponseException__ctor_
-  commentId: Overload:CodersRealm.AmqpClient.SendResponseException.#ctor
+  fullName: CodersRealm.AmqpClient.SendReplyException.SendReplyException(System.Exception)
+  fullName.vb: CodersRealm.AmqpClient.SendReplyException.New(System.Exception)
+  nameWithType: SendReplyException.SendReplyException(Exception)
+  nameWithType.vb: SendReplyException.New(Exception)
+- uid: CodersRealm.AmqpClient.SendReplyException.#ctor*
+  name: SendReplyException
+  href: api/CodersRealm.AmqpClient.SendReplyException.html#CodersRealm_AmqpClient_SendReplyException__ctor_
+  commentId: Overload:CodersRealm.AmqpClient.SendReplyException.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: CodersRealm.AmqpClient.SendResponseException.SendResponseException
-  fullName.vb: CodersRealm.AmqpClient.SendResponseException.New
-  nameWithType: SendResponseException.SendResponseException
-  nameWithType.vb: SendResponseException.New
+  fullName: CodersRealm.AmqpClient.SendReplyException.SendReplyException
+  fullName.vb: CodersRealm.AmqpClient.SendReplyException.New
+  nameWithType: SendReplyException.SendReplyException
+  nameWithType.vb: SendReplyException.New
 - uid: CodersRealm.AmqpClient.ServiceCollectionExtensions
   name: ServiceCollectionExtensions
   href: api/CodersRealm.AmqpClient.ServiceCollectionExtensions.html
@@ -4776,15 +4730,15 @@ references:
   commentId: T:CodersRealm.AmqpClient.SubscriberOptions
   fullName: CodersRealm.AmqpClient.SubscriberOptions
   nameWithType: SubscriberOptions
-- uid: CodersRealm.AmqpClient.SubscriberOptions.#ctor(CodersRealm.AmqpClient.ITopic,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)
-  name: SubscriberOptions(ITopic?, string?, string?, string?, bool, bool, bool, AcknowledgementMode, MessageProcessorAsync?, ErrorHandlerAsync?)
-  href: api/CodersRealm.AmqpClient.SubscriberOptions.html#CodersRealm_AmqpClient_SubscriberOptions__ctor_CodersRealm_AmqpClient_ITopic_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_CodersRealm_AmqpClient_AcknowledgementMode_CodersRealm_AmqpClient_MessageProcessorAsync_CodersRealm_AmqpClient_ErrorHandlerAsync_
-  commentId: M:CodersRealm.AmqpClient.SubscriberOptions.#ctor(CodersRealm.AmqpClient.ITopic,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)
-  name.vb: New(ITopic, String, String, String, Boolean, Boolean, Boolean, AcknowledgementMode, MessageProcessorAsync, ErrorHandlerAsync)
-  fullName: CodersRealm.AmqpClient.SubscriberOptions.SubscriberOptions(CodersRealm.AmqpClient.ITopic?, string?, string?, string?, bool, bool, bool, CodersRealm.AmqpClient.AcknowledgementMode, CodersRealm.AmqpClient.MessageProcessorAsync?, CodersRealm.AmqpClient.ErrorHandlerAsync?)
-  fullName.vb: CodersRealm.AmqpClient.SubscriberOptions.New(CodersRealm.AmqpClient.ITopic, String, String, String, Boolean, Boolean, Boolean, CodersRealm.AmqpClient.AcknowledgementMode, CodersRealm.AmqpClient.MessageProcessorAsync, CodersRealm.AmqpClient.ErrorHandlerAsync)
-  nameWithType: SubscriberOptions.SubscriberOptions(ITopic?, string?, string?, string?, bool, bool, bool, AcknowledgementMode, MessageProcessorAsync?, ErrorHandlerAsync?)
-  nameWithType.vb: SubscriberOptions.New(ITopic, String, String, String, Boolean, Boolean, Boolean, AcknowledgementMode, MessageProcessorAsync, ErrorHandlerAsync)
+- uid: CodersRealm.AmqpClient.SubscriberOptions.#ctor(CodersRealm.AmqpClient.ITopic,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,System.Boolean,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)
+  name: SubscriberOptions(ITopic?, string?, string?, string?, bool, bool, bool, AcknowledgementMode, bool, MessageProcessorAsync?, ErrorHandlerAsync?)
+  href: api/CodersRealm.AmqpClient.SubscriberOptions.html#CodersRealm_AmqpClient_SubscriberOptions__ctor_CodersRealm_AmqpClient_ITopic_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_CodersRealm_AmqpClient_AcknowledgementMode_System_Boolean_CodersRealm_AmqpClient_MessageProcessorAsync_CodersRealm_AmqpClient_ErrorHandlerAsync_
+  commentId: M:CodersRealm.AmqpClient.SubscriberOptions.#ctor(CodersRealm.AmqpClient.ITopic,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,CodersRealm.AmqpClient.AcknowledgementMode,System.Boolean,CodersRealm.AmqpClient.MessageProcessorAsync,CodersRealm.AmqpClient.ErrorHandlerAsync)
+  name.vb: New(ITopic, String, String, String, Boolean, Boolean, Boolean, AcknowledgementMode, Boolean, MessageProcessorAsync, ErrorHandlerAsync)
+  fullName: CodersRealm.AmqpClient.SubscriberOptions.SubscriberOptions(CodersRealm.AmqpClient.ITopic?, string?, string?, string?, bool, bool, bool, CodersRealm.AmqpClient.AcknowledgementMode, bool, CodersRealm.AmqpClient.MessageProcessorAsync?, CodersRealm.AmqpClient.ErrorHandlerAsync?)
+  fullName.vb: CodersRealm.AmqpClient.SubscriberOptions.New(CodersRealm.AmqpClient.ITopic, String, String, String, Boolean, Boolean, Boolean, CodersRealm.AmqpClient.AcknowledgementMode, Boolean, CodersRealm.AmqpClient.MessageProcessorAsync, CodersRealm.AmqpClient.ErrorHandlerAsync)
+  nameWithType: SubscriberOptions.SubscriberOptions(ITopic?, string?, string?, string?, bool, bool, bool, AcknowledgementMode, bool, MessageProcessorAsync?, ErrorHandlerAsync?)
+  nameWithType.vb: SubscriberOptions.New(ITopic, String, String, String, Boolean, Boolean, Boolean, AcknowledgementMode, Boolean, MessageProcessorAsync, ErrorHandlerAsync)
 - uid: CodersRealm.AmqpClient.SubscriberOptions.#ctor*
   name: SubscriberOptions
   href: api/CodersRealm.AmqpClient.SubscriberOptions.html#CodersRealm_AmqpClient_SubscriberOptions__ctor_
@@ -4925,6 +4879,19 @@ references:
   isSpec: "True"
   fullName: CodersRealm.AmqpClient.SubscriberOptions.TopicName
   nameWithType: SubscriberOptions.TopicName
+- uid: CodersRealm.AmqpClient.SubscriberOptions.UseConcurrency
+  name: UseConcurrency
+  href: api/CodersRealm.AmqpClient.SubscriberOptions.html#CodersRealm_AmqpClient_SubscriberOptions_UseConcurrency
+  commentId: P:CodersRealm.AmqpClient.SubscriberOptions.UseConcurrency
+  fullName: CodersRealm.AmqpClient.SubscriberOptions.UseConcurrency
+  nameWithType: SubscriberOptions.UseConcurrency
+- uid: CodersRealm.AmqpClient.SubscriberOptions.UseConcurrency*
+  name: UseConcurrency
+  href: api/CodersRealm.AmqpClient.SubscriberOptions.html#CodersRealm_AmqpClient_SubscriberOptions_UseConcurrency_
+  commentId: Overload:CodersRealm.AmqpClient.SubscriberOptions.UseConcurrency
+  isSpec: "True"
+  fullName: CodersRealm.AmqpClient.SubscriberOptions.UseConcurrency
+  nameWithType: SubscriberOptions.UseConcurrency
 - uid: CodersRealm.AmqpClient.TransactionInProgressException
   name: TransactionInProgressException
   href: api/CodersRealm.AmqpClient.TransactionInProgressException.html

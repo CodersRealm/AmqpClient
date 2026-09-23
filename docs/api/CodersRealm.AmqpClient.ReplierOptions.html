@@ -5,16 +5,16 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class ResponderOptions | CodersRealm Docs </title>
+      <title>Class ReplierOptions | CodersRealm Docs </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class ResponderOptions | CodersRealm Docs ">
+      <meta name="title" content="Class ReplierOptions | CodersRealm Docs ">
     
-    <meta name="description" content="Configuration options that control where and how a responder sends reply messages. These options allow specifying an explicit , or alternatively a destination name and type to be used when creating the response destination.">
+    <meta name="description" content="Configuration options that control where and how a replier sends reply messages. These options allow specifying an explicit , or alternatively a destination name and type to be used when creating the reply destination.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
       <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:navrel" content="">
       <meta property="docfx:tocrel" content="toc.html">
     
     
@@ -66,24 +66,24 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CodersRealm.AmqpClient.ResponderOptions">
+            <article class="content wrap" id="_content" data-uid="CodersRealm.AmqpClient.ReplierOptions">
 
 
 
-  <h1 id="CodersRealm_AmqpClient_ResponderOptions" data-uid="CodersRealm.AmqpClient.ResponderOptions" class="text-break">Class ResponderOptions</h1>
-  <div class="markdown level0 summary"><p>Configuration options that control where and how a responder sends reply messages.
+  <h1 id="CodersRealm_AmqpClient_ReplierOptions" data-uid="CodersRealm.AmqpClient.ReplierOptions" class="text-break">Class ReplierOptions</h1>
+  <div class="markdown level0 summary"><p>Configuration options that control where and how a replier sends reply messages.
 These options allow specifying an explicit <a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a>, or alternatively
-a destination name and type to be used when creating the response destination.</p>
+a destination name and type to be used when creating the reply destination.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">ResponderOptions</span></div>
+    <div class="level1"><span class="xref">ReplierOptions</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html">ResponderOptions</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html">ReplierOptions</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -108,24 +108,24 @@ a destination name and type to be used when creating the response destination.</
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="CodersRealm.html">CodersRealm</a>.<a class="xref" href="CodersRealm.AmqpClient.html">AmqpClient</a></h6>
   <h6><strong>Assembly</strong>: CodersRealm.AmqpClient.dll</h6>
-  <h5 id="CodersRealm_AmqpClient_ResponderOptions_syntax">Syntax</h5>
+  <h5 id="CodersRealm_AmqpClient_ReplierOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed record ResponderOptions : IEquatable&lt;ResponderOptions&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed record ReplierOptions : IEquatable&lt;ReplierOptions&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
 
 
-  <a id="CodersRealm_AmqpClient_ResponderOptions__ctor_" data-uid="CodersRealm.AmqpClient.ResponderOptions.#ctor*"></a>
-  <h4 id="CodersRealm_AmqpClient_ResponderOptions__ctor_CodersRealm_AmqpClient_IDestination_System_String_System_Nullable_CodersRealm_AmqpClient_ResponseDestinationType__" data-uid="CodersRealm.AmqpClient.ResponderOptions.#ctor(CodersRealm.AmqpClient.IDestination,System.String,System.Nullable{CodersRealm.AmqpClient.ResponseDestinationType})">ResponderOptions(IDestination?, string?, ResponseDestinationType?)</h4>
-  <div class="markdown level1 summary"><p>Configuration options that control where and how a responder sends reply messages.
+  <a id="CodersRealm_AmqpClient_ReplierOptions__ctor_" data-uid="CodersRealm.AmqpClient.ReplierOptions.#ctor*"></a>
+  <h4 id="CodersRealm_AmqpClient_ReplierOptions__ctor_CodersRealm_AmqpClient_IDestination_System_String_System_Nullable_CodersRealm_AmqpClient_ReplyDestinationType__" data-uid="CodersRealm.AmqpClient.ReplierOptions.#ctor(CodersRealm.AmqpClient.IDestination,System.String,System.Nullable{CodersRealm.AmqpClient.ReplyDestinationType})">ReplierOptions(IDestination?, string?, ReplyDestinationType?)</h4>
+  <div class="markdown level1 summary"><p>Configuration options that control where and how a replier sends reply messages.
 These options allow specifying an explicit <a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a>, or alternatively
-a destination name and type to be used when creating the response destination.</p>
+a destination name and type to be used when creating the reply destination.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResponderOptions(IDestination? ResponseDestination = null, string? ResponseDestinationName = null, ResponseDestinationType? ResponseDestinationType = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ReplierOptions(IDestination? ReplierDestination = null, string? ReplierDestinationName = null, ReplyDestinationType? ReplierDestinationType = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -139,26 +139,26 @@ a destination name and type to be used when creating the response destination.</
     <tbody>
       <tr>
         <td><a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a></td>
-        <td><span class="parametername">ResponseDestination</span></td>
-        <td><p>An explicit <a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a> to which response messages will be sent.
-When set, this destination takes precedence over <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationName">ResponseDestinationName</a>
-and <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationType">ResponseDestinationType</a>.</p>
+        <td><span class="parametername">ReplierDestination</span></td>
+        <td><p>An explicit <a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a> to which reply messages will be sent.
+When set, this destination takes precedence over <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationName">ReplierDestinationName</a>
+and <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationType">ReplierDestinationType</a>.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">ResponseDestinationName</span></td>
-        <td><p>The name of the destination to use for responses when <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestination">ResponseDestination</a>
-is not provided. This name will be used together with <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationType">ResponseDestinationType</a>
+        <td><span class="parametername">ReplierDestinationName</span></td>
+        <td><p>The name of the destination to use for replies when <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestination">ReplierDestination</a>
+is not provided. This name will be used together with <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationType">ReplierDestinationType</a>
 to create or resolve the destination.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="CodersRealm.AmqpClient.ResponseDestinationType.html">ResponseDestinationType</a>?</td>
-        <td><span class="parametername">ResponseDestinationType</span></td>
+        <td><a class="xref" href="CodersRealm.AmqpClient.ReplyDestinationType.html">ReplyDestinationType</a>?</td>
+        <td><span class="parametername">ReplierDestinationType</span></td>
         <td><p>The type of destination to use when creating or resolving the destination identified
-by <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationName">ResponseDestinationName</a>, for example Queue or Topic. This value is
-ignored when <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestination">ResponseDestination</a> is provided.</p>
+by <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationName">ReplierDestinationName</a>, for example Queue or Topic. This value is
+ignored when <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestination">ReplierDestination</a> is provided.</p>
 </td>
       </tr>
     </tbody>
@@ -167,16 +167,16 @@ ignored when <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#
 </h3>
 
 
-  <a id="CodersRealm_AmqpClient_ResponderOptions_ResponseDestination_" data-uid="CodersRealm.AmqpClient.ResponderOptions.ResponseDestination*"></a>
-  <h4 id="CodersRealm_AmqpClient_ResponderOptions_ResponseDestination" data-uid="CodersRealm.AmqpClient.ResponderOptions.ResponseDestination">ResponseDestination</h4>
-  <div class="markdown level1 summary"><p>An explicit <a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a> to which response messages will be sent.
-When set, this destination takes precedence over <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationName">ResponseDestinationName</a>
-and <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationType">ResponseDestinationType</a>.</p>
+  <a id="CodersRealm_AmqpClient_ReplierOptions_ReplierDestination_" data-uid="CodersRealm.AmqpClient.ReplierOptions.ReplierDestination*"></a>
+  <h4 id="CodersRealm_AmqpClient_ReplierOptions_ReplierDestination" data-uid="CodersRealm.AmqpClient.ReplierOptions.ReplierDestination">ReplierDestination</h4>
+  <div class="markdown level1 summary"><p>An explicit <a class="xref" href="CodersRealm.AmqpClient.IDestination.html">IDestination</a> to which reply messages will be sent.
+When set, this destination takes precedence over <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationName">ReplierDestinationName</a>
+and <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationType">ReplierDestinationType</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDestination? ResponseDestination { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IDestination? ReplierDestination { get; init; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -195,16 +195,16 @@ and <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRea
   </table>
 
 
-  <a id="CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationName_" data-uid="CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationName*"></a>
-  <h4 id="CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationName" data-uid="CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationName">ResponseDestinationName</h4>
-  <div class="markdown level1 summary"><p>The name of the destination to use for responses when <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestination">ResponseDestination</a>
-is not provided. This name will be used together with <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationType">ResponseDestinationType</a>
+  <a id="CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationName_" data-uid="CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationName*"></a>
+  <h4 id="CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationName" data-uid="CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationName">ReplierDestinationName</h4>
+  <div class="markdown level1 summary"><p>The name of the destination to use for replies when <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestination">ReplierDestination</a>
+is not provided. This name will be used together with <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationType">ReplierDestinationType</a>
 to create or resolve the destination.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? ResponseDestinationName { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? ReplierDestinationName { get; init; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -223,16 +223,16 @@ to create or resolve the destination.</p>
   </table>
 
 
-  <a id="CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationType_" data-uid="CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationType*"></a>
-  <h4 id="CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationType" data-uid="CodersRealm.AmqpClient.ResponderOptions.ResponseDestinationType">ResponseDestinationType</h4>
+  <a id="CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationType_" data-uid="CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationType*"></a>
+  <h4 id="CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationType" data-uid="CodersRealm.AmqpClient.ReplierOptions.ReplierDestinationType">ReplierDestinationType</h4>
   <div class="markdown level1 summary"><p>The type of destination to use when creating or resolving the destination identified
-by <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestinationName">ResponseDestinationName</a>, for example Queue or Topic. This value is
-ignored when <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#CodersRealm_AmqpClient_ResponderOptions_ResponseDestination">ResponseDestination</a> is provided.</p>
+by <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestinationName">ReplierDestinationName</a>, for example Queue or Topic. This value is
+ignored when <a class="xref" href="CodersRealm.AmqpClient.ReplierOptions.html#CodersRealm_AmqpClient_ReplierOptions_ReplierDestination">ReplierDestination</a> is provided.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResponseDestinationType? ResponseDestinationType { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ReplyDestinationType? ReplierDestinationType { get; init; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -244,7 +244,7 @@ ignored when <a class="xref" href="CodersRealm.AmqpClient.ResponderOptions.html#
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="CodersRealm.AmqpClient.ResponseDestinationType.html">ResponseDestinationType</a>?</td>
+        <td><a class="xref" href="CodersRealm.AmqpClient.ReplyDestinationType.html">ReplyDestinationType</a>?</td>
         <td></td>
       </tr>
     </tbody>

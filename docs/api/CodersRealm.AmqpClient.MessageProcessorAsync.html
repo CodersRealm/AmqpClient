@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
       <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:navrel" content="">
       <meta property="docfx:tocrel" content="toc.html">
     
     
@@ -78,7 +78,7 @@
   <h6><strong>Assembly</strong>: CodersRealm.AmqpClient.dll</h6>
   <h5 id="CodersRealm_AmqpClient_MessageProcessorAsync_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate Task MessageProcessorAsync(MessageQueueEventArgs e, CancellationToken stoppingToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate Task MessageProcessorAsync(MessageReceivedContext e, CancellationToken stoppingToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -91,7 +91,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="CodersRealm.AmqpClient.MessageQueueEventArgs.html">MessageQueueEventArgs</a></td>
+        <td><a class="xref" href="CodersRealm.AmqpClient.MessageReceivedContext.html">MessageReceivedContext</a></td>
         <td><span class="parametername">e</span></td>
         <td><p>Event arguments containing the received message and related metadata.</p>
 </td>

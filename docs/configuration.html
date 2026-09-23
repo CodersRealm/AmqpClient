@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Client configuration | CodersRealm Docs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Client configuration | CodersRealm Docs ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="images/codersrealm-amqp.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="client-configuration">Client configuration</h1>
+
+<p>This file details various configuration options for the client, the syntax for its related configuration, and various uri options that can be set when defining a connection.</p>
+<h2 id="connection-uri">Connection Uri</h2>
+<p>The basic format of the clients Connection URI is as follows:</p>
+<pre><code>amqp[s]://hostname:port[?option=value[&amp;option2=value...]]
+</code></pre>
+<p>Where the amqps and scheme is specified to use SSL/TLS.</p>
+<p>The client can be configured with a number of different settings using the uri while defining the ConnectionFactory, these are detailed in the following sections.</p>
+<h3 id="main-configuration-options">Main Configuration options</h3>
+<ul>
+<li><strong>username</strong> The user name used to authenticate the connection.</li>
+<li><strong>password</strong> The password used to authenticate the connection.</li>
+<li><strong>clientId</strong> The client id that is applied to the connection. Used by some message brokers for defining the client id on the message broker.</li>
+<li><strong>clientIdPrefix</strong> Optional prefix value that is used for generated Client ID values when a new Connection is created. Mainly used by the Artemis Messsage Broker for shared subscribers and you want to be able to tell your conecctions apart on the broker side. The default prefix is 'ID:'.</li>
+<li><strong>connectionIdPrefix</strong> Optional prefix value that is used for generated Connection ID values when a new Connection is created. This connection ID is used when logging some information from the connection object so a configurable prefix can make breadcrumbing the logs easier. The default prefix is 'ID:'.</li>
+<li><strong>localMessageExpiry</strong> Controls whether consumers and subscribes instances will locally filter expired Messages or deliver them. By default this value is set to true and expired messages will be filtered.</li>
+<li><strong>requestTimeout</strong> Timeout value that controls how long the client waits on completion of various interactions, such as opening a producer or consumer, before returning an error. By default the client will wait indefinitely for a request to complete.</li>
+<li><strong>maxNewConnectionRatePerSec</strong> The rate limit for how fast connections to the message broker are created. It is used to prevent connection storms. Default value is -1 (unlimited).</li>
+<li><strong>prefetchPolicy.all</strong> Sets the initial AMQP &quot;link credit&quot; (the prefetch size) for all message consumers and subscribers.</li>
+</ul>
+<h3 id="amqp-configuration-options">AMQP Configuration options</h3>
+<ul>
+<li><strong>amqp.vhost</strong> Optional, the name of the virtual host to which we are connecting. By default this value is derived from the URI. Can be used to determine the correct service if connecting to an AMQP proxy.</li>
+</ul>
+<h3 id="tcp-transport-configuration-options">TCP Transport Configuration options</h3>
+<p>When connected to a remote using plain TCP these options configure the behaviour of the underlying socket. These options are appended to the connection URI along with the other configuration options, for example:</p>
+<pre><code>amqp://localhost:5672?clientId=foo&amp;transport.receiveBufferSize=30000
+</code></pre>
+<p>The complete set of TCP Transport options is listed below:</p>
+<ul>
+<li><strong>transport.sendBufferSize</strong> Specifies the send buffer size option of the TCP socket.</li>
+<li><strong>transport.receiveBufferSize</strong> Specifies the receiver buffer size option of the TCP socket.</li>
+<li><strong>transport.receiveTimeout</strong> Specifies the receive timeout option of the TCP socket.</li>
+<li><strong>transport.sendTimeout</strong> Specifies the send timeout option of the TCP socket.</li>
+<li><strong>transport.tcpKeepAliveTime</strong> Specifies how often a keep-alive transmission is sent to an idle connection.</li>
+<li><strong>transport.tcpKeepAliveInterval</strong> Specifies how often a keep-alive transmission is sent when no response is received from previous keep-alive transmissions.</li>
+<li><strong>transport.tcpNoDelay</strong> Specifies the NoDelay option of the TCP socket.</li>
+</ul>
+<p>If <em>tcpKeepAliveTime</em> or <em>tcpKeepAliveInterval</em> it set, TCP Keep-Alive is enabled.</p>
+<h3 id="failover-configuration-options">Failover Configuration options</h3>
+<p>With failover enabled the client can reconnect to another server automatically when connection to the current server is lost for some reason. The failover URI is always initiated with the failover prefix and a list of URIs for the server(s) is contained inside a set of parentheses. The &quot;&quot; options are applied to the overall failover URI, outside the parentheses, and affect the NMS Connection object for its lifetime.</p>
+<p>The URI for failover looks something like the following:</p>
+<pre><code>failover:(amqp://host1:5672,amqp://host2:5672)?clientId=foo&amp;failover.maxReconnectAttempts=20
+</code></pre>
+<p>The individual broker details within the parentheses can use the &quot;transport.&quot; or &quot;amqp.&quot; options defined earlier, with these being applied as each host is connected to:</p>
+<pre><code>failover:(amqp://host1:5672?amqp.option=value,amqp://host2:5672?transport.option=value)?clientId=foo
+</code></pre>
+<p>The complete set of configuration options for failover is listed below:</p>
+<ul>
+<li><strong>failover.initialReconnectDelay</strong> The amount of time the client will wait before the first attempt to reconnect to a remote peer. The default value is zero, meaning the first attempt happens immediately.</li>
+<li><strong>failover.reconnectDelay</strong> Controls the delay between successive reconnection attempts, defaults to 10 milliseconds. If the backoff option is not enabled this value remains constant.</li>
+<li><strong>failover.maxReconnectDelay</strong> The maximum time that the client will wait before attempting a reconnect. This value is only used when the backoff feature is enabled to ensure that the delay doesn't not grow too large. Defaults to 30 seconds as the max time between connect attempts.</li>
+<li><strong>failover.useReconnectBackOff</strong> Controls whether the time between reconnection attempts should grow based on a configured multiplier. This option defaults to true.</li>
+<li><strong>failover.reconnectBackOffMultiplier</strong> The multiplier used to grow the reconnection delay value, defaults to 2.0d.</li>
+<li><strong>failover.reconnectDelayRandomFactor</strong> Reconnect backoff random factor. 0 means no randomisation. 0.5 would mean backoff time could be (pseudo)randomly between 0.5 and 1.5 of normal reconnect backoff time. 1 would mean backoff time could be between 0 and 2x normal reconnect backoff. 2 would mean backoff time between 0 and 3x normal backoff, and so on. Default value is 0.</li>
+<li><strong>failover.maxReconnectAttempts</strong> The number of reconnection attempts allowed before reporting the connection as failed to the client. The default is no limit or (-1).</li>
+<li><strong>failover.startupMaxReconnectAttempts</strong> For a client that has never connected to a remote peer before this option control how many attempts are made to connect before reporting the connection as failed. The default is to use the value of maxReconnectAttempts.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
