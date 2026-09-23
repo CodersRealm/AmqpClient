@@ -270,7 +270,7 @@ builder.Services.AddAmqpClient(options =>
 - Validate that your client's designated AcknowledgementMode aligns with broker rules.
 
 ### Performance Issues
-- Scale up the `PrefetchCount` configuration setting to maximize network pipelines. See **[Configurations](https://github.com/apache/activemq-amqp/blob/main/docs/configuration.md)**.
+- Scale up the `PrefetchCount` configuration setting to maximize network pipelines. See **[Configurations](https://codersrealm.github.io/AmqpClient/configuration.html)**.
 - Switch to `DupsOkAcknowledge` mode if system logic permits duplicate processing.
 - Provision parallel consumer instances to distribute concurrent processing loads.
 
