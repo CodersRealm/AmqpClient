@@ -947,10 +947,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/codersrealm-amqp.png",
+      "source_relative_path": "images/codersrealm-amqpclient-128x128.png",
       "output": {
         "resource": {
-          "relative_path": "images/codersrealm-amqp.png"
+          "relative_path": "images/codersrealm-amqpclient-128x128.png"
         }
       },
       "version": ""
